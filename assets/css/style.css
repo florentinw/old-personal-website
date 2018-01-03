@@ -1,0 +1,372 @@
+/*
+-----------------------
+RESET.CSS by Eric Meyer
+-----------------------
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+-----------------------
+COLORS
+-----------------------
+*/
+:root {
+  --black: #222222;
+  --darkgray: #444444;
+  --lightgray: #eeeeee;
+  --white: #ffffff;
+}
+
+/*
+-----------------------
+MAIN
+-----------------------
+*/
+body,
+html {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 25px;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 800;
+  line-height: 0.9em;
+}
+h1 > b {
+  font-weight: 900;
+}
+h2 {
+  font-size: 2.6em;
+  color: var(--black);
+  font-weight: 800;
+  line-height: 1em;
+}
+h2 > b {
+  font-weight: 900;
+}
+h3 {
+  font-size: 1.5em;
+  color: var(--black);
+  font-weight: 600;
+  line-height: 1.2em;
+}
+h3 > b {
+  font-weight: 800;
+}
+h4 {
+  font-size: 1.1em;
+  color: var(--black);
+  font-weight: 500;
+  line-height: 1.1em;
+}
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+}
+p {
+  line-height: 1.4;
+}
+p > b {
+  font-weight: 500;
+}
+
+section {
+  padding: 5em 0;
+}
+a {
+  font-size: 1em;
+  color: var(--black);
+  font-weight: 500;
+  line-height: 1.4em;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+a:hover {
+  color: var(--darkgray);
+}
+
+/*
+-----------------------
+CLASSES
+-----------------------
+*/
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 3;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container {
+  width: 1100px;
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 75%;
+  }
+}
+.sw {
+  filter: grayscale(1);
+}
+
+/*
+-----------------------
+HEADER
+-----------------------
+*/
+header {
+  background-color: #2c3e50;
+  color: var(--white);
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to left, #2980b9, #2c3e50);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .logo {
+  height: calc(3em + 3vw);
+  position: fixed;
+}
+
+/*
+-----------------------
+ABOUT
+-----------------------
+*/
+section#about {
+  background-color: var(--white);
+  color: var(--black);
+  text-align: left;
+}
+section#about p {
+  font-size: calc(1em + 1.2vw);
+}
+
+/*
+-----------------------
+PORTFOLIO
+-----------------------
+*/
+section#port {
+  background-color: #202020;
+  padding: 0;
+}
+section#port .flex-1 {
+  flex-basis: 200px;
+}
+section#port a {
+  line-height: 0px;
+}
+section#port .item {
+  width: 100%;
+  height: auto;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+section#port .item:focus {
+  filter: inherit;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+section#port .item:hover {
+  filter: inherit;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+/*
+-----------------------
+CONTACT
+-----------------------
+*/
+section#contact {
+  text-align: center;
+}
+section#contact form > * {
+  width: 100%;
+  max-width: 600px;
+  box-sizing: border-box;
+  margin: 0.5em 0;
+  padding: 1em;
+}
+button {
+  text-transform: uppercase;
+  border: none;
+  background: var(--black);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.7em;
+}
+input,
+textarea {
+  font-family: 'Roboto Mono', monospace;
+  border: 3px solid var(--lightgray);
+  transition: 0.5s;
+  font-size: 0.6em;
+}
+input:focus,
+textarea:focus {
+  border: 3px solid var(--darkgray);
+}
+:invalid {
+  box-shadow: none;
+}
