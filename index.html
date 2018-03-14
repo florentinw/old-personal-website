@@ -5,67 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flo</title>
+    <title>Florentin</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
-    <header class="flex-center">
-        <div class="nav-icon"></div>
-        <svg class="logo" viewBox="0 0 456 340" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <g id="Artboard" transform="translate(-2672 -80)" fill-rule="nonzero" fill="#fff">
-                <path d="M3006.16667,80 L3127.08185,80 L3080.41518,220 L2980.74852,220 L2947.41518,320 L2847.74852,320 L2814.41518,420 L2672.25148,420 L2785.58482,80 L2906.5,80 L3006.16667,80 Z M2938.58482,220 L2938.25148,220 L2971.58482,120 L2914.08185,120 L2860.74852,280 L2918.58482,280 L2938.58482,220 Z M2871.91815,120 L2814.41518,120 L2727.74852,380 L2785.58482,380 L2805.58482,320 L2805.25148,320 L2871.91815,120 Z M3071.58482,120 L3013.74852,120 L2993.74852,180 L3051.58482,180 L3071.58482,120 Z"
-                    id="F" />
-            </g>
-        </svg>
+    <nav id="nav" class="fullheight fullwidth flex vertical-center horizontal-center" style="transform: translateY(-100vh);">
+        <img id="closebtn" onclick="closeNav();" class="icon" src="assets/svgs/icons/closenav.svg">
+        <div class="nav">
+            <ul class="menu">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="top fullwidth">
+            <a href="/">
+                <img src="assets/svgs/logo.svg" alt="logo" class="logo" title="logo">
+            </a>
+            <img id="openbtn" onclick="openNav();" class="icon" src="assets/svgs/icons/opennav.svg">
+        </div>
+        <div class="content text">
+            <h1>Hello!</h1>
+            <p>I'm
+                <b>Florentin</b>, 15 years old, a designer based in a small town in Germany.</p>
+            <p>Currently I am working as a freelancer for your ideas and projects. Want to work with me? I’d love to hear from
+                you.
+            </p>
+        </div>
     </header>
-    <section id="about">
-        <div class="container">
-            <p>Hey. I'm
-                <b>Florentin</b>, 15 years old, based in a small town in Germany. Currently I am working as a freelancer for
-                your ideas and projects. Want to work with me? I’d love to hear from you.</p>
+    <section id="port" class="fullwidth">
+        <div class="row flex">
+            <div class="item flex">
+                <div class="img" style="background-image: url('assets/imgs/header.jpg')"></div>
+                <div class="text light left">
+                    <h2>Category</h2>
+                </div>
+            </div>
+            <div class="item flex left">
+                <div class="img" style="background-image: url('assets/imgs/header.jpg')"></div>
+                <div class="text dark">
+                    <h2>Category</h2>
+                </div>
+            </div>
         </div>
-    </section>
-    <section id="port" class="flex">
-        <div class="flex-1">
-            <a href="daadafsf">
-                <img class="item sw" src="https://flooo.me/assets/imgs/port/mc.png" alt="1">
-            </a>
-        </div>
-        <div class="flex-1">
-            <a href="daadafsf">
-                <img class="item sw" src="https://flooo.me/assets/imgs/port/mc.png" alt="1">
-            </a>
-        </div>
-        <div class="flex-1">
-            <a href="daadafsf">
-                <img class="item sw" src="https://flooo.me/assets/imgs/port/mc.png" alt="1">
-            </a>
-        </div>
-        <div class="flex-1">
-            <a href="daadafsf">
-                <img class="item sw" src="https://flooo.me/assets/imgs/port/mc.png" alt="1">
-            </a>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="container">
-            <form action="https://send.pageclip.co/i0lVS5vgetAmfXqMh0ERdAbRejqBmEul/contact-form" class="pageclip-form" method="post">
+        <div class="row flex">
+            <div class="item flex">
+                <div class="text dark flex right">
+                    <h2>Category</h2>
+                </div>
+                <div class="img" style="background-image: url('assets/imgs/header.jpg')"></div>
 
-                <input type="email" name="email" placeholder="roscoe@example.com" required />
-                <br>
-                <textarea name="body" placeholder="Your Message" required></textarea>
-                <br>
-                <button type="submit" class="pageclip-form__submit">
-                    <span>Send</span>
-                </button>
-            </form>
-        </div>
+            </div>
+            <div class="item flex">
+                <div class="text light right">
+                    <h2>Category</h2>
+                </div>
+                <div class="img" style="background-image: url('assets/imgs/logo.jpg')" </div>
+
+                </div>
+            </div>
     </section>
-    <footer></footer>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
 </body>
 
 </html>
