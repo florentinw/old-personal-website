@@ -151,6 +151,20 @@ body {
   letter-spacing: -0.1rem;
 }
 
+@media only screen and (max-width: 1100px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -330,7 +344,7 @@ header .top #openbtn {
 }
 
 header .text {
-  padding-top: 70vh;
+  padding-top: 32vh;
 }
 
 header .text h1 {
