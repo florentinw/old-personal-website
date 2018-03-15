@@ -10,6 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script>
+        function calculateAge(birthday) {
+            var ageDifMs = Date.now() - birthday.getTime();
+            var ageDate = new Date(ageDifMs);
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }
+        const age = calculateAge(new Date('6/17/2002'))
+    </script>
 </head>
 
 <body>
@@ -36,7 +44,8 @@
         <div class="content text">
             <h1>Hello!</h1>
             <p>I'm
-                <b>Florentin</b>, 15 years old, a designer based in a small town in Germany.</p>
+                <b>Florentin</b>,
+                <script>document.write(age)</script> years old, a designer based in a small town in Germany.</p>
             <p>Currently I am working as a freelancer for your ideas and projects. Want to work with me? I’d love to hear from
                 you.
             </p>
@@ -44,35 +53,39 @@
     </header>
     <section id="port" class="fullwidth">
         <div class="row flex">
-            <div class="item flex">
-                <div class="img" style="background-image: url('assets/imgs/header.jpg')"></div>
-                <div class="text light left">
-                    <h2>Category</h2>
+            <div class="item flex light">
+                <div class="img" style="background-image: url('assets/imgs/branding.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/48073889/Logos')"></div>
+                <div class="text flex">
+                    <h2>Branding</h2>
+                    <a href="https://www.behance.net/gallery/48073889/Logos">More</a>
                 </div>
             </div>
-            <div class="item flex left">
-                <div class="img" style="background-image: url('assets/imgs/header.jpg')"></div>
-                <div class="text dark">
-                    <h2>Category</h2>
+            <div class="item flex dark">
+                <div class="img" style="background-image: url('assets/imgs/ad.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47740683/Advertising')"></div>
+                <div class="text flex">
+                    <h2>Advertising</h2>
+                    <a href="https://www.behance.net/gallery/47740683/Advertising">More</a>
                 </div>
             </div>
         </div>
         <div class="row flex">
-            <div class="item flex">
-                <div class="text dark flex right">
-                    <h2>Category</h2>
+            <div class="item flex dark">
+                <div class="text flex">
+                    <h2>Header</h2>
+                    <a href="https://www.behance.net/gallery/47747201/Header">More</a>
                 </div>
-                <div class="img" style="background-image: url('assets/imgs/header.jpg')"></div>
+                <div class="img" style="background-image: url('assets/imgs/header.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47747201/Header')"></div>
 
             </div>
-            <div class="item flex">
-                <div class="text light right">
-                    <h2>Category</h2>
+            <div class="item flex light">
+                <div class="text flex">
+                    <h2>UI</h2>
+                    <a href="https://www.behance.net/gallery/47747487/UI">More</a>
                 </div>
-                <div class="img" style="background-image: url('assets/imgs/logo.jpg')" </div>
+                <div class="img" style="background-image: url('assets/imgs/ui.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47747487/UI')"></div>
 
-                </div>
             </div>
+        </div>
     </section>
 </body>
 

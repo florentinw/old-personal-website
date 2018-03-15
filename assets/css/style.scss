@@ -162,7 +162,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.04rem;
 }
 
@@ -269,7 +269,7 @@ NAV
 nav {
   transform: translateY(-100%);
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s all ease-in-out;
@@ -314,6 +314,7 @@ header {
     align-content: space-between;
     justify-content: space-between;
     position: fixed;
+    z-index: 1;
 
     .logo {
       height: 40px;
@@ -326,21 +327,22 @@ header {
     }
   }
   .text {
-    padding-top: 40em;
+    padding-top: 70vh;
     h1 {
+      font-weight: 600;
       font-size: 12em;
       background: -webkit-linear-gradient(right, #ecd95b, #ef5f52);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     p {
-      font-size: 3.1em;
-      line-height: 1.3em;
-      font-weight: 500;
-      margin: 1.2rem 0;
+      font-size: 2.7em;
+      line-height: 1.35em;
+      font-weight: 400;
+      margin: 1.8rem 0;
 
       &:first-of-type {
-        margin-top: 0.3rem;
+        margin-top: 0.4rem;
       }
     }
   }
@@ -368,24 +370,37 @@ section#port {
       .img {
         background-size: cover;
         background-position: center;
+        cursor: pointer;
+        transition: all ease-in-out 0.5s;
+        filter: grayscale(1);
+
+        &:hover {
+          filter: grayscale(0);
+        }
       }
       .text {
         box-sizing: border-box;
         padding: 80px;
-
-        &.dark {
-          background-color: $dark;
-          color: $white;
-        }
-        &.light {
-          background-color: $white;
-          color: $dark;
-        }
+        justify-content: space-between;
+        flex-direction: column;
 
         h2 {
-          font-size: 2em;
+          font-size: 1.7em;
           width: 100%;
         }
+        a {
+          text-transform: uppercase;
+          letter-spacing: 0;
+          font-weight: 700;
+        }
+      }
+      &.dark {
+        background-color: $dark;
+        color: $white;
+      }
+      &.light {
+        background-color: $white;
+        color: $dark;
       }
     }
   }
