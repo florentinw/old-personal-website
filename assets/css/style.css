@@ -165,6 +165,13 @@ body {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    font-size: 10px;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -405,7 +412,7 @@ section#port .row .item .img:hover {
 
 section#port .row .item .text {
   box-sizing: border-box;
-  padding: 80px;
+  padding: 4em;
   justify-content: space-between;
   flex-direction: column;
 }
