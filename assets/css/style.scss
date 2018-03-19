@@ -340,13 +340,16 @@ header {
     h1 {
       font-weight: 600;
       font-size: 12em;
+      color: #bbb;
+      /*
       background: -webkit-linear-gradient(right, #ecd95b, #ef5f52);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      */
     }
     p {
       font-size: 2.7em;
-      line-height: 1.35em;
+      line-height: 1.4;
       font-weight: 400;
       margin: 1.8rem 0;
 
