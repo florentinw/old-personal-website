@@ -193,7 +193,7 @@ b {
   font-weight: 700;
 }
 section {
-  margin: 150px 0;
+  padding: 75px 0;
 }
 
 /*
@@ -318,6 +318,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 250px;
+  padding-bottom: 75px;
 
   .top {
     box-sizing: border-box;
@@ -549,7 +550,7 @@ FOOTER
 -----------------------
 */
 footer {
-  margin: 80px 0;
+  padding: 50px 0;
   .flex {
     justify-content: space-between;
     flex-wrap: wrap;

@@ -191,7 +191,7 @@ b {
 }
 
 section {
-  margin: 150px 0;
+  padding: 75px 0;
 }
 
 /*
@@ -318,6 +318,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 250px;
+  padding-bottom: 75px;
 }
 
 header .top {
@@ -593,7 +594,7 @@ FOOTER
 -----------------------
 */
 footer {
-  margin: 80px 0;
+  padding: 50px 0;
 }
 
 footer .flex {
