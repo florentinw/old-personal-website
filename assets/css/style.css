@@ -148,28 +148,7 @@ body {
   font-family: 'Roboto Mono', sans-serif;
   font-weight: 400;
   word-wrap: break-word;
-  letter-spacing: -0.1rem;
-}
-
-@media only screen and (max-width: 1100px) {
-  html,
-  body {
-    font-size: 15px;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  html,
-  body {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  html,
-  body {
-    font-size: 10px;
-  }
+  letter-spacing: -0.04em;
 }
 
 h1,
@@ -177,7 +156,6 @@ h2,
 h3,
 h4 {
   font-weight: 500;
-  letter-spacing: -0.04rem;
 }
 
 p {
@@ -210,6 +188,10 @@ a:hover {
 strong,
 b {
   font-weight: 700;
+}
+
+section {
+  margin: 150px 0;
 }
 
 /*
@@ -252,6 +234,15 @@ div.list {
 
 .fullwidth {
   width: 100%;
+}
+
+.dab:hover {
+  color: red;
+  background: url("./../imgs/dab.png");
+  background-position: center;
+  background-size: cover;
+  height: 20px;
+  width: 20px;
 }
 
 /*
@@ -356,17 +347,46 @@ header .text {
 
 header .text h1 {
   font-weight: 600;
-  font-size: 12em;
-  color: #bbb;
+  font-size: 220px;
+  color: #aaa;
+  transition: ease-in-out 0.1s all;
   /*
-      background: -webkit-linear-gradient(right, #ecd95b, #ef5f52);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      */
+        background: -webkit-linear-gradient(right, #ecd95b, #ef5f52);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        */
+}
+
+header .text h1:hover {
+  color: #bbb;
+}
+
+@media only screen and (max-width: 1100px) {
+  header .text h1 {
+    font-size: 190px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header .text h1 {
+    font-size: 140px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  header .text h1 {
+    font-size: 90px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  header .text h1 {
+    font-size: 70px;
+  }
 }
 
 header .text p {
-  font-size: 2.7em;
+  font-size: 50px;
   line-height: 1.4;
   font-weight: 400;
   margin: 1.8rem 0;
@@ -376,15 +396,29 @@ header .text p:first-of-type {
   margin-top: 0.4rem;
 }
 
+@media only screen and (max-width: 1100px) {
+  header .text p {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header .text p {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  header .text p {
+    font-size: 25px;
+  }
+}
+
 /*
 -----------------------
 PORTFOLIO
 -----------------------
 */
-section#port {
-  margin: 150px 0;
-}
-
 section#port .row {
   flex-wrap: wrap;
 }
@@ -415,9 +449,15 @@ section#port .row .item .img:hover {
 
 section#port .row .item .text {
   box-sizing: border-box;
-  padding: 4em;
+  padding: 35px;
   justify-content: space-between;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+  section#port .row .item .text {
+    padding: 20px;
+  }
 }
 
 section#port .row .item .text h2 {
@@ -439,5 +479,152 @@ section#port .row .item.dark {
 section#port .row .item.light {
   background-color: #fff;
   color: #111;
+}
+
+/*
+-----------------------
+CONTACT
+-----------------------
+*/
+section#contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+section#contact .content h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+section#contact .content p {
+  margin: 15px auto;
+}
+
+section#contact .content form {
+  margin: 25px 0;
+}
+
+section#contact .content form input[type='text'],
+section#contact .content form input[type='email'] {
+  -webkit-appearance: none;
+  border-radius: 0px;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 15px;
+  display: block;
+  font-size: 0.7em;
+  background-color: whitesmoke;
+  padding: 13px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  border: 3px solid whitesmoke;
+  transition: ease-in-out 0.2s all;
+}
+
+section#contact .content form input[type='text']:focus,
+section#contact .content form input[type='email']:focus {
+  border: 3px solid #e6e6e6;
+}
+
+section#contact .content form input[type='text']:invalid,
+section#contact .content form input[type='email']:invalid {
+  border: 3px solid whitesmoke;
+  outline: none;
+  box-shadow: none;
+}
+
+section#contact .content form textarea {
+  -webkit-appearance: none;
+  border-radius: 0px;
+  text-decoration: none;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 15px;
+  background-color: whitesmoke;
+  resize: vertical;
+  overflow: hidden;
+  display: block;
+  box-sizing: border-box;
+  font-size: 0.7em;
+  font-family: 'Roboto Mono', sans-serif;
+  padding: 15px 20px;
+  width: 100%;
+  min-height: 100px;
+  border: 3px solid whitesmoke;
+}
+
+section#contact .content form textarea:focus {
+  border: 3px solid #e6e6e6;
+  transition: ease-in-out 0.2s all;
+}
+
+section#contact .content form button {
+  margin-bottom: 15px;
+  display: inline;
+  font-family: 'Roboto Mono', sans-serif;
+  margin: 10px;
+  border: none;
+  text-decoration: none;
+  background: initial;
+  font-size: 1.2em;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+section#contact .content form .flex {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+section#contact .content form .flex input {
+  flex-basis: 250px;
+  flex: 1;
+  margin-right: 15px;
+}
+
+section#contact .content form .flex input:last-of-type {
+  margin-right: 0;
+}
+
+/*
+-----------------------
+FOOTER
+-----------------------
+*/
+footer {
+  margin: 80px 0;
+}
+
+footer .flex {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .flex ul {
+  list-style: none;
+  flex-basis: 400px;
+}
+
+footer .flex ul li {
+  display: inline;
+}
+
+footer .flex ul li::after {
+  content: '-';
+}
+
+footer .flex ul li:last-of-type::after {
+  content: '';
+}
+
+footer .flex ul li a {
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.04rem;
+}
+
+footer hr {
+  border: #111 2px solid;
 }
 /*# sourceMappingURL=style.css.map */
