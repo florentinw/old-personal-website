@@ -83,12 +83,28 @@
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/smoothscroll.js"></script>
     <script>
+        // <Array>.random() returns a single random element from an array
+        // [1, 2, 3, 4, 5].random() can return 1, 2, 3, 4 or 5.
+        Array.prototype.random = function () {
+            return this[Math.floor(Math.random() * this.length)]
+        }
+
         function calculateAge(birthday) {
             var ageDifMs = Date.now() - birthday.getTime();
             var ageDate = new Date(ageDifMs);
             return Math.abs(ageDate.getUTCFullYear() - 1970);
         }
-        const age = calculateAge(new Date('6/17/2002'))</script>
+        const age = calculateAge(new Date('6/17/2002'))
+
+        function getRandomGradient() {
+            const gradients = [
+                { from: "#fff", to: "#000" },
+                { from: "#555", to: "#999" }
+            ]
+            return gradients.random()
+        }
+        let randomGradient = getRandomGradient()
+    </script>
 </head>
 
 <body>
