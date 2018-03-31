@@ -468,6 +468,7 @@ section#contact {
     }
     form {
       margin: 25px 0;
+
       input[type='text'],
       input[type='email'] {
         -webkit-appearance: none;
@@ -484,9 +485,7 @@ section#contact {
         width: 100%;
         border: 3px solid rgb(245, 245, 245);
         transition: ease-in-out 0.2s all;
-        &:focus {
-          border: 3px solid rgb(230, 230, 230);
-        }
+        border-radius: 2px;
         &:invalid {
           border: 3px solid rgb(245, 245, 245);
           outline: none;
@@ -494,6 +493,7 @@ section#contact {
         }
       }
       textarea {
+        border-radius: 2px;
         -webkit-appearance: none;
         border-radius: 0px;
         text-decoration: none;
@@ -511,13 +511,9 @@ section#contact {
         width: 100%;
         min-height: 100px;
         border: 3px solid rgb(245, 245, 245);
-        &:focus {
-          border: 3px solid rgb(230, 230, 230);
-          transition: ease-in-out 0.2s all;
-        }
+        transition: ease-in-out 0.2s all;
       }
       button {
-        margin-bottom: 15px;
         display: inline;
         font-family: 'Roboto Mono', sans-serif;
         margin: 10px;

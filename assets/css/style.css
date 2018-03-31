@@ -522,11 +522,7 @@ section#contact .content form input[type='email'] {
   width: 100%;
   border: 3px solid whitesmoke;
   transition: ease-in-out 0.2s all;
-}
-
-section#contact .content form input[type='text']:focus,
-section#contact .content form input[type='email']:focus {
-  border: 3px solid #e6e6e6;
+  border-radius: 2px;
 }
 
 section#contact .content form input[type='text']:invalid,
@@ -537,6 +533,7 @@ section#contact .content form input[type='email']:invalid {
 }
 
 section#contact .content form textarea {
+  border-radius: 2px;
   -webkit-appearance: none;
   border-radius: 0px;
   text-decoration: none;
@@ -554,15 +551,10 @@ section#contact .content form textarea {
   width: 100%;
   min-height: 100px;
   border: 3px solid whitesmoke;
-}
-
-section#contact .content form textarea:focus {
-  border: 3px solid #e6e6e6;
   transition: ease-in-out 0.2s all;
 }
 
 section#contact .content form button {
-  margin-bottom: 15px;
   display: inline;
   font-family: 'Roboto Mono', sans-serif;
   margin: 10px;
