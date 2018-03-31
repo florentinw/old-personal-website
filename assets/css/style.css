@@ -358,10 +358,6 @@ header .text h1 {
         */
 }
 
-header .text h1:hover {
-  color: #bbb;
-}
-
 @media only screen and (max-width: 1100px) {
   header .text h1 {
     font-size: 190px;

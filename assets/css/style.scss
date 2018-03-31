@@ -346,9 +346,6 @@ header {
       font-size: 220px;
       color: #aaa;
       transition: ease-in-out 0.1s all;
-      &:hover {
-        color: #bbb;
-      }
       @media only screen and (max-width: 1100px) {
         font-size: 190px;
       }

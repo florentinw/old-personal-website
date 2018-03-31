@@ -82,6 +82,7 @@
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
     <script>
         // <Array>.random() returns a single random element from an array
         // [1, 2, 3, 4, 5].random() can return 1, 2, 3, 4 or 5.
@@ -98,12 +99,12 @@
 
         function getRandomGradient() {
             const gradients = [
-                { from: "#fff", to: "#000" },
-                { from: "#555", to: "#999" }
+                { from: "#ecd95b", to: "#ef5f52" },
+                { from: "#478CBE", to: "#59E4DA" },
+                { from: "#b5f155", to: "#3dc074" }
             ]
             return gradients.random()
         }
-        let randomGradient = getRandomGradient()
     </script>
 </head>
 
@@ -132,7 +133,7 @@
             <img id="openbtn" onclick="openNav();" class="icon" src="assets/svgs/icons/opennav.svg">
         </div>
         <div class="content text">
-            <h1 class="reveal">Hello!</h1>
+            <h1 id="content-hello" class="reveal">Hello!</h1>
             <p class="reveal">I'm
                 <b>Florentin</b>,
                 <script>document.write(age)</script> years old, a designer based in a small town in Germany.</p>
@@ -244,8 +245,13 @@
 
     </footer>
 
-    <script src="assets/js/scrollreveal.min.js"></script>
     <script>
+
+        let randomGradient = getRandomGradient()
+        document.getElementById('content-hello').style.background = "-webkit-linear-gradient(right, " + randomGradient.from + ", " + randomGradient.to + ")"
+        document.getElementById('content-hello').style["-webkit-background-clip"] = "text"
+        document.getElementById('content-hello').style["-webkit-text-fill-color"] = "transparent"
+        //${randomGradient.from}
         window.sr = ScrollReveal({
             scale: 1,
             delay: 100,
