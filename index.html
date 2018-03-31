@@ -4,20 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Florentin</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- Normal Tags-->
+    <title>Florentin - Creative Artist</title>
+    <meta name="description" content="I'm Florentin, a designer based in a small town in Germany. I love designing logos, developing websites and creating posters.">
+    <meta name="keywords" content="flooo.me, flo, florentin, design, designer, creative, artist, freelancer, german, portfolio, social media, simple, personal, black and white, logo, ad, advertising, ui, user interface, web, web design, onepage, dribbble, behance, twitter">
+
+    <meta name="apple-mobile-web-app-title" content="Florentin">
+    <meta name="application-name" content="Florentin">
+    <meta name="theme-color" content="#777777">
+
+    <link rel="canonical" href="https://flooo.me/">
+    <link rel="publisher" href="https://plus.google.com/b/108893784076508258374">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://flooo.me" />
+    <meta property="og:site_name" content="Florentin" />
+    <meta property="og:title" content="Florentin - Creative Artist" />
+    <meta property="og:description" content="I'm Florentin, a designer based in a small town in Germany. I love designing logos, developing websites and creating posters.">
+    <meta property="og:image" content="https://flooo.me/assets/imgs/meta/card.png">
+    <meta property="og:image:secure_url" content="https://flooo.me/assets/imgs/meta/card.png">
+
+    <!-- Twitter Card für Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@iamblwck">
+    <meta name="twitter:creator" content="@iamblwck">
+    <meta name="twitter:title" content="Florentin - Creative Artist">
+    <meta name="twitter:description" content="I'm Florentin, a designer based in a small town in Germany. I love designing logos, developing websites and creating posters.">
+    <meta name="twitter:image" content="https://flooo.me/assets/imgs/meta/card.png">
+
+    <!-- Schema.org Markup für Google+ -->
+    <meta itemprop="name" content="Florentin - Creative Artist">
+    <meta itemprop="description" content="I'm Florentin, a designer based in a small town in Germany. I love designing logos, developing websites and creating posters.">
+    <meta itemprop="image" content="https://flooo.me/assets/imgs/meta/card.png">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://movact.de/wp-content/themes/movact-v2/assets/img/app_icons/apple-touch-icon.png?v=2">
+    <link rel="icon" type="image/png" href="https://movact.de/wp-content/themes/movact-v2/assets/img/app_icons/favicon-32x32.png?v=2"
+        sizes="32x32">
+    <link rel="icon" type="image/png" href="https://movact.de/wp-content/themes/movact-v2/assets/img/app_icons/favicon-16x16.png?v=2"
+        sizes="16x16">
+    <link rel="manifest" href="https://movact.de/wp-content/themes/movact-v2/assets/img/app_icons/manifest.json?v=2">
+    <link rel="mask-icon" href="https://movact.de/wp-content/themes/movact-v2/assets/img/app_icons/safari-pinned-tab.svg?v=2"
+        color="#fd0268">
+    <link rel="shortcut icon" href="https://movact.de/wp-content/themes/movact-v2/assets/img/app_icons/favicon.ico?v=2">
+
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
-    <script src="assets/js/nav.js"></script>
+
     <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/nav.js"></script>
     <script>
         function calculateAge(birthday) {
             var ageDifMs = Date.now() - birthday.getTime();
             var ageDate = new Date(ageDifMs);
             return Math.abs(ageDate.getUTCFullYear() - 1970);
         }
-        const age = calculateAge(new Date('6/17/2002'))
-    </script>
+        const age = calculateAge(new Date('6/17/2002'))</script>
 </head>
 
 <body>
@@ -45,28 +92,42 @@
             <img id="openbtn" onclick="openNav();" class="icon" src="assets/svgs/icons/opennav.svg">
         </div>
         <div class="content text">
-            <h1>Hello!</h1>
-            <p>I'm
+            <h1 class="reveal">Hello!</h1>
+            <p class="reveal">I'm
                 <b>Florentin</b>,
                 <script>document.write(age)</script> years old, a designer based in a small town in Germany.</p>
-            <p>Currently I am working as a freelancer for your ideas and projects. Want to work with me? I’d love to hear from
-                you.
+            <p class="reveal">
+                Sometimes
+                <b>I design logos</b>,
+                <b>develop websites</b>,
+                <b>create posters</b> or do other stuff for good people. Sometimes I just eat chocolate.
+            </p>
+            <!--
+            <p class="reveal"> I'm also working with a
+                <b>digital creative agency</b> called
+                <a href="https://coralic.studio">coralic</a>
+            </p>
+            -->
+            <p class="reveal">Currently I am working as a
+                <b>freelancer</b> for your ideas and projects. Want to work with me?
+                <a href="https://coralic.studio">I’d love to hear from you!
+                </a>
             </p>
         </div>
     </header>
     <section id="port" class="fullwidth">
         <div class="row flex">
             <div class="item flex light">
-                <div class="img" style="background-image: url('assets/imgs/branding.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/48073889/Logos')"></div>
+                <div class="img" style="background-image: url('assets/imgs/portfolio/branding.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/48073889/Logos')"></div>
                 <div class="text flex">
-                    <h2>Branding</h2>
+                    <h2 class="reveal">Branding</h2>
                     <a href="https://www.behance.net/gallery/48073889/Logos">More</a>
                 </div>
             </div>
             <div class="item flex dark">
-                <div class="img" style="background-image: url('assets/imgs/ad.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47740683/Advertising')"></div>
+                <div class="img" style="background-image: url('assets/imgs/portfolio/ad.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47740683/Advertising')"></div>
                 <div class="text flex">
-                    <h2>Advertising</h2>
+                    <h2 class="reveal">Advertising</h2>
                     <a href="https://www.behance.net/gallery/47740683/Advertising">More</a>
                 </div>
             </div>
@@ -74,30 +135,30 @@
         <div class="row flex">
             <div class="item flex dark">
                 <div class="text flex">
-                    <h2>Header</h2>
+                    <h2 class="reveal">Header</h2>
                     <a href="https://www.behance.net/gallery/47747201/Header">More</a>
                 </div>
-                <div class="img" style="background-image: url('assets/imgs/header.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47747201/Header')"></div>
+                <div class="img" style="background-image: url('assets/imgs/portfolio/header.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47747201/Header')"></div>
 
             </div>
             <div class="item flex light">
                 <div class="text flex">
-                    <h2>UI</h2>
+                    <h2 class="reveal">UI</h2>
                     <a href="https://www.behance.net/gallery/47747487/UI">More</a>
                 </div>
-                <div class="img" style="background-image: url('assets/imgs/ui.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47747487/UI')"></div>
+                <div class="img" style="background-image: url('assets/imgs/portfolio/ui.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47747487/UI')"></div>
 
             </div>
         </div>
     </section>
     <section id="contact">
         <div class="content">
-            <h2>Get in touch with me</h2>
-            <p>I love hearing from new people. Tell me about your thing — we might be able to work together. If you have any
+            <h2 class="reveal">Get in touch with me</h2>
+            <p class="reveal">I love hearing from new people. Tell me about your thing — we might be able to work together. If you have any
                 questions, feel free to hit me up via the form given below, as well as on Twitter and i will get back to
                 you as soon as possible.
             </p>
-            <form accept-charset="UTF-8" action="https://usebasin.com/f/81a61b7376ed" method="POST">
+            <form class="reveal" accept-charset="UTF-8" action="https://usebasin.com/f/81a61b7376ed" method="POST">
                 <div class="flex">
                     <input name="name" placeholder="Name" type="text" required>
                     <input id="email" name="email" placeholder="E-Mail" type="email" required>
@@ -142,6 +203,16 @@
         </div>
 
     </footer>
+
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script>
+        window.sr = ScrollReveal({
+            scale: 1,
+            delay: 100,
+            duration: 1200,
+        });
+        sr.reveal('.reveal');
+    </script>
 </body>
 
 </html>
