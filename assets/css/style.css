@@ -351,11 +351,9 @@ header .text h1 {
   font-size: 220px;
   color: #aaa;
   transition: ease-in-out 0.1s all;
-  /*
-        background: -webkit-linear-gradient(right, #ecd95b, #ef5f52);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        */
+  background: -webkit-linear-gradient(right, #ecd95b, #ef5f52);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media only screen and (max-width: 1100px) {
