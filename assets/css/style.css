@@ -159,7 +159,7 @@ h4 {
 }
 
 p {
-  line-height: 1.8;
+  line-height: 1.7;
   font-size: 1em;
   margin: 0.2em 0;
 }
@@ -507,7 +507,7 @@ section#contact .content p {
 }
 
 section#contact .content form {
-  margin: 25px 0;
+  margin: 40px 0;
 }
 
 section#contact .content form input[type='text'],
@@ -561,7 +561,7 @@ section#contact .content form textarea {
 section#contact .content form button {
   display: inline;
   font-family: 'Roboto Mono', sans-serif;
-  margin: 10px;
+  margin: 10px 0;
   border: none;
   text-decoration: none;
   background: initial;
