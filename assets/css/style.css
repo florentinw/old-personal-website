@@ -503,7 +503,7 @@ section#contact .content h2 {
 }
 
 section#contact .content p {
-  margin: 15px auto;
+  margin: 10px auto;
 }
 
 section#contact .content form {
@@ -512,8 +512,9 @@ section#contact .content form {
 
 section#contact .content form input[type='text'],
 section#contact .content form input[type='email'] {
+  font-size: 0.7em;
+  font-family: 'Roboto Mono', sans-serif;
   -webkit-appearance: none;
-  border-radius: 0px;
   text-decoration: none;
   outline: none;
   box-shadow: none;
@@ -534,6 +535,45 @@ section#contact .content form input[type='email']:invalid {
   border: 3px solid whitesmoke;
   outline: none;
   box-shadow: none;
+}
+
+section#contact .content form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  color: #717171;
+  margin-bottom: 15px;
+  display: block;
+  background-color: whitesmoke;
+  box-sizing: border-box;
+  border: 3px solid whitesmoke;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+  padding: 13px 20px;
+  width: 100%;
+  background-image: url(../imgs/select-arrow.png);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+section#contact .content form select::-ms-expand {
+  display: none;
+}
+
+section#contact .content form select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+section#contact .content form select option {
+  background: whitesmoke;
+}
+
+section#contact .content form .lt-ie10 select {
+  background-image: none;
 }
 
 section#contact .content form textarea {
@@ -575,14 +615,22 @@ section#contact .content form .flex {
   flex-wrap: wrap;
 }
 
-section#contact .content form .flex input {
-  flex-basis: 250px;
+section#contact .content form .flex:last-child {
+  margin-right: 0;
+}
+
+section#contact .content form .flex input,
+section#contact .content form .flex select {
   flex: 1;
   margin-right: 15px;
 }
 
-section#contact .content form .flex input:last-of-type {
-  margin-right: 0;
+section#contact .content form .flex select {
+  flex-basis: 250px;
+}
+
+section#contact .content form .flex input {
+  flex-basis: 250px;
 }
 
 /*

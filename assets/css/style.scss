@@ -465,15 +465,16 @@ section#contact {
       font-weight: 600;
     }
     p {
-      margin: 15px auto;
+      margin: 10px auto;
     }
     form {
       margin: 40px 0;
 
       input[type='text'],
       input[type='email'] {
+        font-size: 0.7em;
+        font-family: 'Roboto Mono', sans-serif;
         -webkit-appearance: none;
-        border-radius: 0px;
         text-decoration: none;
         outline: none;
         box-shadow: none;
@@ -492,6 +493,43 @@ section#contact {
           outline: none;
           box-shadow: none;
         }
+      }
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 2px;
+        color: #717171;
+        margin-bottom: 15px;
+        display: block;
+        background-color: rgb(245, 245, 245);
+        box-sizing: border-box;
+        border: 3px solid rgb(245, 245, 245);
+
+        font-family: 'Roboto Mono', sans-serif;
+        font-size: 0.7em;
+        letter-spacing: 0.3px;
+        font-weight: 300;
+
+        padding: 13px 20px;
+        width: 100%;
+
+        background-image: url(../imgs/select-arrow.png);
+        background-position: right;
+        background-repeat: no-repeat;
+        &::-ms-expand {
+          display: none;
+        }
+        &:-moz-focusring {
+          color: transparent;
+          text-shadow: 0 0 0 #000;
+        }
+        option {
+          background: rgb(245, 245, 245);
+        }
+      }
+      .lt-ie10 select {
+        background-image: none;
       }
       textarea {
         border-radius: 2px;
@@ -528,14 +566,19 @@ section#contact {
       .flex {
         justify-content: space-between;
         flex-wrap: wrap;
+        &:last-child {
+          margin-right: 0;
+        }
+        input,
+        select {
+          flex: 1;
+          margin-right: 15px;
+        }
+        select {
+          flex-basis: 250px;
+        }
         input {
           flex-basis: 250px;
-          flex: 1;
-
-          margin-right: 15px;
-          &:last-of-type {
-            margin-right: 0;
-          }
         }
       }
     }
