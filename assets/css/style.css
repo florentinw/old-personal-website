@@ -601,25 +601,33 @@ footer .flex {
 
 footer .flex ul {
   list-style: none;
-  flex-basis: 315px;
+  flex-basis: 200px;
+}
+
+footer .flex ul.icons {
+  text-align: right;
 }
 
 footer .flex ul li {
   display: inline;
-}
-
-footer .flex ul li::after {
-  content: '-';
-}
-
-footer .flex ul li:last-of-type::after {
-  content: '';
+  /*
+        &::after {
+          content: '-';
+        }
+        &:last-of-type::after {
+          content: '';
+        }
+        */
 }
 
 footer .flex ul li a {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.04rem;
+}
+
+footer .flex ul li a svg {
+  margin-left: 8px;
 }
 
 footer hr {

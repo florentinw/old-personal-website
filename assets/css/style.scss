@@ -554,20 +554,27 @@ footer {
     flex-wrap: wrap;
     ul {
       list-style: none;
-      flex-basis: 315px;
+      flex-basis: 200px;
+      &.icons {
+        text-align: right;
+      }
       li {
         display: inline;
-
+        /*
         &::after {
           content: '-';
         }
         &:last-of-type::after {
           content: '';
         }
+        */
         a {
           font-weight: 400;
           font-size: 14px;
           letter-spacing: -0.04rem;
+          svg {
+            margin-left: 8px;
+          }
         }
       }
     }
