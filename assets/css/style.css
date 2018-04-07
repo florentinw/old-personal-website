@@ -674,7 +674,8 @@ footer .flex ul li a {
   letter-spacing: -0.04rem;
 }
 
-footer .flex ul li a svg {
+footer .flex ul li a .icon {
+  height: 18px;
   margin-left: 8px;
 }
 
