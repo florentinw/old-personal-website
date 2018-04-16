@@ -615,14 +615,15 @@ section#contact .content form .flex {
   flex-wrap: wrap;
 }
 
-section#contact .content form .flex:last-child {
-  margin-right: 0;
-}
-
 section#contact .content form .flex input,
 section#contact .content form .flex select {
   flex: 1;
   margin-right: 15px;
+}
+
+section#contact .content form .flex input:last-child,
+section#contact .content form .flex select:last-child {
+  margin-right: 0;
 }
 
 section#contact .content form .flex select {

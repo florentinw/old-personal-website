@@ -566,13 +566,14 @@ section#contact {
       .flex {
         justify-content: space-between;
         flex-wrap: wrap;
-        &:last-child {
-          margin-right: 0;
-        }
+
         input,
         select {
           flex: 1;
           margin-right: 15px;
+          &:last-child {
+            margin-right: 0;
+          }
         }
         select {
           flex-basis: 250px;
