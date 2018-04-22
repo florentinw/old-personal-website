@@ -200,14 +200,9 @@ CLASSES
 -----------------------
 */
 div.content {
-  width: 1100px;
+  max-width: 1100px;
   margin: auto;
-}
-
-@media only screen and (max-width: 1200px) {
-  div.content {
-    width: 80%;
-  }
+  width: 80%;
 }
 
 div.list {
