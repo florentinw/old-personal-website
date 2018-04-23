@@ -94,8 +94,6 @@
             var ageDate = new Date(ageDifMs);
             return Math.abs(ageDate.getUTCFullYear() - 1970);
         }
-        const age = calculateAge(new Date('6/17/2002'))
-
         function getRandomGradient() {
             const gradients = [
                 { from: "#ecd95b", to: "#ef5f52" },
@@ -114,13 +112,13 @@
         <div class="nav">
             <ul class="menu">
                 <li>
-                    <a href="#about" onclick="closeNav();">About</a>
+                    <a class="multilang" href="#about" onclick="closeNav();" data-de="Über mich">About</a>
                 </li>
                 <li>
-                    <a href="#port" onclick="closeNav();">Portfolio</a>
+                    <a href="#port" onclick="closeNav();" data-de="Arbeiten">Portfolio</a>
                 </li>
                 <li>
-                    <a href="#contact" onclick="closeNav();">Contact</a>
+                    <a href="#contact" onclick="closeNav();" data-de="Kontakt">Contact</a>
                 </li>
             </ul>
         </div>
@@ -133,11 +131,13 @@
             <img id="openbtn" onclick="openNav();" class="icon" src="assets/svgs/icons/opennav.svg">
         </div>
         <div class="content text">
-            <h1 id="content-hello" class="reveal">Hello!</h1>
-            <p class="reveal">I'm
+            <h1 id="content-hello" class="reveal" data-de="Hallo!">Hello!</h1>
+            <p class="reveal" data-de="Ich bin <b>Florentin</b>, <span id='age'></span>&nbsp;Jahre&nbsp;alt,
+                ein Designer aus einem kleinen Dorf in Deutschland.">I'm
                 <b>Florentin</b>,
-                <script>document.write(age)</script>&nbsp;years&nbsp;old, a designer based in a small town in Germany.</p>
-            <p class="reveal">
+                <span id="age"></span>&nbsp;years&nbsp;old, a designer based in a small town in Germany.</p>
+            <p class="reveal" data-de="Manchmal <b>designe ich Logos</b>, <b>entwickle Websiten</b>, <b>kreiere Poster</b> oder mache Sachen für
+                nette Leute. Manchmal esse ich auch einfach Schokolade.">
                 Sometimes
                 <b>I design&nbsp;logos</b>,
                 <b>develop&nbsp;websites</b>,
@@ -149,7 +149,8 @@
                 <a href="https://coralic.studio" target="_blank">coralic</a>
             </p>
             -->
-            <p class="reveal">Currently I am working as a
+            <p class="reveal" data-de="Aktuell arbeite ich als ein <b>Freelancer</b> an Deine Ideen und Projekte.
+                Du willst mit mir arbeiten?  -  <a href='#contact'>Ich freue mich von Dir zuhören!</a>">Currently I am working as a
                 <b>freelancer</b> for your ideas and projects. Want to work with me?
                 <a href="#contact">I’d&nbsp;love to hear from you!
                 </a>
@@ -162,14 +163,14 @@
                 <div class="img" style="background-image: url('assets/imgs/portfolio/branding.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/48073889/Logos')"></div>
                 <div class="text flex">
                     <h2 class="reveal">Branding</h2>
-                    <a href="https://www.behance.net/gallery/48073889/Logos">More</a>
+                    <a href="https://www.behance.net/gallery/48073889/Logos" data-de="Mehr">More</a>
                 </div>
             </div>
             <div class="item flex dark">
                 <div class="img" style="background-image: url('assets/imgs/portfolio/ad.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47740683/Advertising')"></div>
                 <div class="text flex">
-                    <h2 class="reveal">Advertising</h2>
-                    <a href="https://www.behance.net/gallery/47740683/Advertising">More</a>
+                    <h2 class="reveal" data-de="Werbung">Advertising</h2>
+                    <a href="https://www.behance.net/gallery/47740683/Advertising" data-de="Mehr">More</a>
                 </div>
             </div>
         </div>
@@ -177,7 +178,7 @@
             <div class="item flex dark">
                 <div class="text flex">
                     <h2 class="reveal">Header</h2>
-                    <a href="https://www.behance.net/gallery/47747201/Header">More</a>
+                    <a href="https://www.behance.net/gallery/47747201/Header" data-de="Mehr">More</a>
                 </div>
                 <div class="img" style="background-image: url('assets/imgs/portfolio/header.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47747201/Header')"></div>
 
@@ -185,7 +186,7 @@
             <div class="item flex light">
                 <div class="text flex">
                     <h2 class="reveal">UI</h2>
-                    <a href="https://www.behance.net/gallery/47747487/UI">More</a>
+                    <a href="https://www.behance.net/gallery/47747487/UI" data-de="Mehr">More</a>
                 </div>
                 <div class="img" style="background-image: url('assets/imgs/portfolio/ui.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47747487/UI')"></div>
 
@@ -194,12 +195,14 @@
     </section>
     <section id="contact">
         <div class="content">
-            <h2 class="reveal">Let's work together!</h2>
-            <p class="reveal">
+            <h2 class="reveal" data-de="Lass mal zusammenarbeiten!">Let's work together!</h2>
+            <p class="reveal" data-de="Erzähl' mir von Deiner Idee - damit wir bei Deinem nächsten Projekt zusammenarbeiten können!">
                 Just tell me about your thing — so we can work together on your next project!
             </p>
-            <p> If you have any questions, feel free to hit me up via the form given below, as well as on Twitter and I will
-                get back to you as soon as possible.
+            <p data-de="Falls Du irgendwelche Fragen hast, zögere nicht mich über das unten angegebene Formular oder auf Twitter zu kontaktieren
+             - Ich werde mich so schnell wie möglich bei Dir melden.">
+                If you have any questions, feel free to hit me up via the form given below, as well as on Twitter and I will get back to
+                you as soon as possible.
             </p>
             <form class="reveal" accept-charset="UTF-8" action="https://usebasin.com/f/81a61b7376ed" method="POST">
                 <div class="flex">
@@ -207,7 +210,7 @@
                     <input id="email" name="email" placeholder="E-Mail" type="email" required>
                 </div>
                 <div class="flex">
-                    <input name="subject" placeholder="Subject" type="text" required>
+                    <input name="subject" placeholder="Subject" data-de="Betreff" type="text" required>
                     <select name="budget">
                         <option value="Empty">Budget</option>
                         <option value="Not required">-</option>
@@ -218,11 +221,9 @@
                     </select>
                 </div>
 
-                <textarea name="message" placeholder="Message"></textarea>
+                <textarea name="message" placeholder="Message" data-de="Nachricht"></textarea>
 
-
-
-                <button name="send" type="submit">SEND</button>
+                <button name="send" type="submit" data-de="senden">send</button>
             </form>
         </div>
     </section>
@@ -234,7 +235,9 @@
                     <li>
                         <a href="https://designhub.fun/imprint" target="_blank">
                             © Copyright
-                            <script>document.write(new Date().getFullYear())</script> - Imprint</a>
+                            <span id="year"></span> -
+                            <span data-de="Impressum">Imprint</span>
+                        </a>
                     </li>
                 </ul>
                 <ul class="icons">
@@ -265,18 +268,36 @@
     </footer>
 
     <script>
-
         let randomGradient = getRandomGradient()
         document.getElementById('content-hello').style.background = "-webkit-linear-gradient(right, " + randomGradient.from + ", " + randomGradient.to + ")"
         document.getElementById('content-hello').style["-webkit-background-clip"] = "text"
         document.getElementById('content-hello').style["-webkit-text-fill-color"] = "transparent"
-        //${randomGradient.from}
+
         window.sr = ScrollReveal({
             scale: 1,
             delay: 100,
             duration: 1200,
         });
         sr.reveal('.reveal');
+
+        const language = navigator.languages && navigator.languages[0] || navigator.language || navigator.userLanguage || "en";
+        let multilangElements = document.querySelectorAll('[data-de]');
+        for (const elem of multilangElements) {
+            if (language == "de") {
+                switch (elem.nodeName) {
+                    case 'INPUT':
+                    case 'TEXTAREA':
+                        elem.placeholder = elem.dataset.de
+                        break;
+                    default:
+                        elem.innerHTML = elem.dataset.de
+                        break;
+                }
+            }
+        }
+
+        document.getElementById('age').innerHTML = calculateAge(new Date('6/17/2002'))
+        document.getElementById('year').innerHTML = new Date().getFullYear()
     </script>
 </body>
 

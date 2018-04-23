@@ -594,6 +594,7 @@ section#contact .content form textarea {
 }
 
 section#contact .content form button {
+  text-transform: uppercase;
   display: inline;
   font-family: 'Roboto Mono', sans-serif;
   margin: 10px 0;
@@ -641,11 +642,17 @@ footer {
 footer .flex {
   justify-content: space-between;
   flex-wrap: wrap;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 500px) {
+  footer .flex {
+    flex-direction: column;
+  }
 }
 
 footer .flex ul {
   list-style: none;
-  flex-basis: 200px;
 }
 
 footer .flex ul.icons {
@@ -675,7 +682,28 @@ footer .flex ul li a .icon {
   margin-left: 8px;
 }
 
+footer .flex ul li a span {
+  display: inline;
+}
+
 footer hr {
   border: #111 2px solid;
 }
+
+/*
+-----------------------
+MEGA OP MULTILANGUAGE THING
+(works like 4%)
+-----------------------
+*/
+/*
+body:lang(de) {
+  [lang-de] {
+    font-size: 0px;
+    &:after {
+      content: attr(lang-de);
+    }
+  }
+}
+*/
 /*# sourceMappingURL=style.css.map */
