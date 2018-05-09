@@ -199,7 +199,7 @@ section {
 CLASSES
 -----------------------
 */
-div.content {
+.content {
   max-width: 1100px;
   margin: auto;
   width: 80%;
@@ -305,10 +305,45 @@ nav ul li a:hover {
 
 /*
 -----------------------
+NAVBAR
+-----------------------
+*/
+aside#navbar {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  padding: 35px 50px;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+  aside#navbar {
+    background: #fff;
+  }
+}
+
+aside#navbar .logo {
+  height: 40px;
+}
+
+aside#navbar img#openbtn {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+/*
+-----------------------
 HEADER
 -----------------------
 */
-header {
+header#about {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -316,38 +351,11 @@ header {
   padding-bottom: 75px;
 }
 
-header .top {
-  box-sizing: border-box;
-  padding: 35px 50px;
-  display: flex;
-  align-content: space-between;
-  justify-content: space-between;
-  position: fixed;
-  z-index: 1;
-}
-
-@media only screen and (max-width: 1100px) {
-  header .top {
-    background: #fff;
-  }
-}
-
-header .top .logo {
-  height: 40px;
-}
-
-header .top #openbtn {
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-  padding: 5px;
-}
-
-header .text {
+header#about .text {
   padding-top: 32vh;
 }
 
-header .text h1 {
+header#about .text h1 {
   font-weight: 600;
   font-size: 220px;
   color: #aaa;
@@ -358,59 +366,59 @@ header .text h1 {
 }
 
 @media only screen and (max-width: 1100px) {
-  header .text h1 {
+  header#about .text h1 {
     font-size: 190px;
   }
 }
 
 @media only screen and (max-width: 870px) {
-  header .text h1 {
+  header#about .text h1 {
     font-size: 140px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  header .text h1 {
+  header#about .text h1 {
     font-size: 90px;
   }
 }
 
 @media only screen and (max-width: 420px) {
-  header .text h1 {
+  header#about .text h1 {
     font-size: 70px;
   }
 }
 
-header .text p {
+header#about .text p {
   font-size: 48px;
   line-height: 1.4;
   font-weight: 400;
   margin: 1.8rem 0;
 }
 
-header .text p:first-of-type {
+header#about .text p:first-of-type {
   margin-top: 0.4rem;
 }
 
-header .text p a {
+header#about .text p a {
   font-weight: 700;
   border-bottom: 0.1em solid #111;
 }
 
 @media only screen and (max-width: 1100px) {
-  header .text p {
+  header#about .text p {
     font-size: 40px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  header .text p {
+  header#about .text p {
     font-size: 30px;
   }
 }
 
 @media only screen and (max-width: 400px) {
-  header .text p {
+  header#about .text p {
     font-size: 25px;
   }
 }
@@ -535,7 +543,6 @@ section#contact .content form input[type='email']:invalid {
 section#contact .content form select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   border-radius: 2px;
   color: #717171;
   margin-bottom: 15px;
@@ -706,4 +713,33 @@ body:lang(de) {
   }
 }
 */
+/*
+-----------------------
+JUST A PAGE
+-----------------------
+*/
+main#page {
+  padding-top: 18vh;
+}
+
+main#page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+main#page h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.4em;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+main#page a {
+  font-weight: 500;
+  border-bottom: 2px solid #111;
+}
+
+main#page p {
+  margin: 0.6em 0;
+}
 /*# sourceMappingURL=style.css.map */

@@ -56,54 +56,6 @@
     <!--  Stylesheets -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700" rel="stylesheet">
-
-    <!-- Matomo -->
-    <script type="text/javascript">
-        var _paq = _paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function () {
-            var u = "//analytics.florentinwalter.de/";
-            _paq.push(['setTrackerUrl', u + 'piwik.php']);
-            _paq.push(['setSiteId', '3']);
-            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'piwik.js'; s.parentNode.insertBefore(g, s);
-        })();
-    </script>
-    <noscript>
-        <p>
-            <img src="//analytics.florentinwalter.de/piwik.php?idsite=3&rec=1" style="border:0;" alt="" />
-        </p>
-    </noscript>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="assets/js/nav.js"></script>
-    <script src="assets/js/smoothscroll.js"></script>
-    <script src="assets/js/scrollreveal.min.js"></script>
-    <script>
-        // <Array>.random() returns a single random element from an array
-        // [1, 2, 3, 4, 5].random() can return 1, 2, 3, 4 or 5.
-        Array.prototype.random = function () {
-            return this[Math.floor(Math.random() * this.length)]
-        }
-
-        function calculateAge(birthday) {
-            var ageDifMs = Date.now() - birthday.getTime();
-            var ageDate = new Date(ageDifMs);
-            return Math.abs(ageDate.getUTCFullYear() - 1970);
-        }
-        function getRandomGradient() {
-            const gradients = [
-                { from: "#ecd95b", to: "#ef5f52" },
-                { from: "#478CBE", to: "#59E4DA" },
-                { from: "#b5f155", to: "#3dc074" },
-                { from: "#C04848", to: "#480048" }
-            ]
-            return gradients.random()
-        }
-    </script>
 </head>
 
 <body>
@@ -123,13 +75,13 @@
             </ul>
         </div>
     </nav>
+    <aside id="navbar">
+        <a href="/">
+            <img src="assets/svgs/logo.svg" alt="logo" class="logo" title="logo">
+        </a>
+        <img id="openbtn" onclick="openNav();" class="icon" src="assets/svgs/icons/opennav.svg">
+    </aside>
     <header id="about">
-        <div class="top fullwidth">
-            <a href="/">
-                <img src="assets/svgs/logo.svg" alt="logo" class="logo" title="logo">
-            </a>
-            <img id="openbtn" onclick="openNav();" class="icon" src="assets/svgs/icons/opennav.svg">
-        </div>
         <div class="content text">
             <h1 id="content-hello" class="reveal" data-de="Hallo!">Hello!</h1>
             <p class="reveal" data-de="Ich bin <b>Florentin</b>, <span id='age'></span>&nbsp;Jahre&nbsp;alt,
@@ -233,10 +185,10 @@
             <div class="flex">
                 <ul>
                     <li>
-                        <a href="https://designhub.fun/imprint" target="_blank">
+                        <a href="/legaldisclosure.html">
                             © Copyright
                             <span id="year"></span> -
-                            <span data-de="Impressum">Imprint</span>
+                            <span data-de="Impressum">Legal Disclosure</span>
                         </a>
                     </li>
                 </ul>
@@ -267,7 +219,35 @@
 
     </footer>
 
+    <!-- Scripts -->
+    <script src="assets/js/language.js"></script>
+    <script src="assets/js/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/scrollreveal.min.js"></script>
+    <script src="assets/js/matomo.js"></script>
     <script>
+        // <Array>.random() returns a single random element from an array
+        // [1, 2, 3, 4, 5].random() can return 1, 2, 3, 4 or 5.
+        Array.prototype.random = function () {
+            return this[Math.floor(Math.random() * this.length)]
+        }
+
+        function calculateAge(birthday) {
+            var ageDifMs = Date.now() - birthday.getTime();
+            var ageDate = new Date(ageDifMs);
+            return Math.abs(ageDate.getUTCFullYear() - 1970);
+        }
+        function getRandomGradient() {
+            const gradients = [
+                { from: "#ecd95b", to: "#ef5f52" },
+                { from: "#478CBE", to: "#59E4DA" },
+                { from: "#b5f155", to: "#3dc074" },
+                { from: "#C04848", to: "#480048" }
+            ]
+            return gradients.random()
+        }
+
         let randomGradient = getRandomGradient()
         document.getElementById('content-hello').style.background = "-webkit-linear-gradient(right, " + randomGradient.from + ", " + randomGradient.to + ")"
         document.getElementById('content-hello').style["-webkit-background-clip"] = "text"
@@ -279,22 +259,6 @@
             duration: 1200,
         });
         sr.reveal('.reveal');
-
-        const language = navigator.languages && navigator.languages[0] || navigator.language || navigator.userLanguage || navigator.browserLanguage || "en";
-        let multilangElements = document.querySelectorAll('[data-de]');
-        for (const elem of multilangElements) {
-            if (language.indexOf("de") > -1) {
-                switch (elem.nodeName) {
-                    case 'INPUT':
-                    case 'TEXTAREA':
-                        elem.placeholder = elem.dataset.de
-                        break;
-                    default:
-                        elem.innerHTML = elem.dataset.de
-                        break;
-                }
-            }
-        }
 
         document.getElementById('age').innerHTML = calculateAge(new Date('6/17/2002'))
         document.getElementById('year').innerHTML = new Date().getFullYear()

@@ -202,7 +202,7 @@ CLASSES
 -----------------------
 */
 
-div.content {
+.content {
   max-width: 1100px;
   margin: auto;
   width: 80%;
@@ -307,38 +307,49 @@ nav {
 
 /*
 -----------------------
+NAVBAR
+-----------------------
+*/
+aside#navbar {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  padding: 35px 50px;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  margin: 0;
+
+  @media only screen and (max-width: 1100px) {
+    background: #fff;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  img#openbtn {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    padding: 5px;
+  }
+}
+
+/*
+-----------------------
 HEADER
 -----------------------
 */
-header {
+header#about {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 250px;
   padding-bottom: 75px;
 
-  .top {
-    box-sizing: border-box;
-    padding: 35px 50px;
-    display: flex;
-    align-content: space-between;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 1;
-    @media only screen and (max-width: 1100px) {
-      background: #fff;
-    }
-
-    .logo {
-      height: 40px;
-    }
-    #openbtn {
-      height: 30px;
-      width: 30px;
-      cursor: pointer;
-      padding: 5px;
-    }
-  }
   .text {
     padding-top: 32vh;
     h1 {
@@ -494,7 +505,6 @@ section#contact {
       select {
         -webkit-appearance: none;
         -moz-appearance: none;
-        appearance: none;
         border-radius: 2px;
         color: #717171;
         margin-bottom: 15px;
@@ -650,3 +660,30 @@ body:lang(de) {
   }
 }
 */
+
+/*
+-----------------------
+JUST A PAGE
+-----------------------
+*/
+main#page {
+  padding-top: 18vh;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.4em;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  a {
+    font-weight: 500;
+    border-bottom: 2px solid $dark;
+  }
+  p {
+    margin: 0.6em 0;
+  }
+}
