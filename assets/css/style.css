@@ -581,6 +581,7 @@ section#contact .content form .lt-ie10 select {
 section#contact .content form textarea {
   border-radius: 2px;
   -webkit-appearance: none;
+  appearance: none;
   border-radius: 0px;
   text-decoration: none;
   outline: none;
