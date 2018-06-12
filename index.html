@@ -59,27 +59,36 @@
 </head>
 
 <body>
+    <div id="acceptCookies">
+        <h3>Cookies</h3>
+        <p data-de="Meine Website verwendet Cookies.<br>Indem du fortfährst, stimmst du der Verwendung von Cookies zu.">My website uses cookies.
+            <br>By continuing, you agree to the use of cookies.
+            <br>
+            <a href="datenschutz" data-de="Mehr Informationen">More Info</a>
+        </p>
+        <button onclick="javascript:acceptCookies()" data-de="Schließen">Close</button>
+    </div>
     <nav id="nav" class="fullheight fullwidth flex vertical-center horizontal-center" style="transform: translateY(-100vh);">
-        <img id="closebtn" onclick="closeNav();" class="icon" src="assets/svgs/icons/closenav.svg" alt="Close Menu" title="Close Menu">
+        <img id="closebtn" onclick="javascript:closeNav()" class="icon" src="assets/svgs/icons/closenav.svg" alt="Close Menu" title="Close Menu">
         <div class="nav">
             <ul class="menu">
                 <li>
-                    <a class="multilang" href="#about" onclick="closeNav();" data-de="Über mich">About</a>
+                    <a class="multilang" href="#about" onclick="javascript:closeNav()" data-de="Über mich">About</a>
                 </li>
                 <li>
-                    <a href="#port" onclick="closeNav();" data-de="Arbeiten">Portfolio</a>
+                    <a href="#port" onclick="javascript:closeNav()" data-de="Arbeiten">Portfolio</a>
                 </li>
                 <li>
-                    <a href="#contact" onclick="closeNav();" data-de="Kontakt">Contact</a>
+                    <a href="#contact" onclick="javascript:closeNav()" data-de="Kontakt">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
     <aside id="navbar">
         <a href="/">
-            <img src="assets/svgs/logo.svg" alt="Logo" class="logo" title="Logo">
+            <img src="assets/svgs/logo.svg" alt="Logo" class="logo" title="Florentin - Creative Artist">
         </a>
-        <img id="openbtn" onclick="openNav();" class="icon" src="assets/svgs/icons/opennav.svg" alt="Open Menu" title="Open Menu">
+        <img id="openbtn" onclick="javascript:openNav()" class="icon" src="assets/svgs/icons/opennav.svg" alt="Open Menu" title="Open Menu">
     </aside>
     <header id="about">
         <div class="content text">
@@ -115,14 +124,14 @@
                 <div class="img" style="background-image: url('assets/imgs/portfolio/branding.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/48073889/Logos')"></div>
                 <div class="text flex">
                     <h2 class="reveal">Branding</h2>
-                    <a href="https://www.behance.net/gallery/48073889/Logos" data-de="Mehr">More</a>
+                    <a href="https://www.behance.net/gallery/48073889/Logos" data-de="Mehr" target="_blank">More</a>
                 </div>
             </div>
             <div class="item flex dark">
                 <div class="img" style="background-image: url('assets/imgs/portfolio/ad.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47740683/Advertising')"></div>
                 <div class="text flex">
                     <h2 class="reveal" data-de="Werbung">Advertising</h2>
-                    <a href="https://www.behance.net/gallery/47740683/Advertising" data-de="Mehr">More</a>
+                    <a href="https://www.behance.net/gallery/47740683/Advertising" data-de="Mehr" target="_blank">More</a>
                 </div>
             </div>
         </div>
@@ -130,7 +139,7 @@
             <div class="item flex dark">
                 <div class="text flex">
                     <h2 class="reveal">Header</h2>
-                    <a href="https://www.behance.net/gallery/47747201/Header" data-de="Mehr">More</a>
+                    <a href="https://www.behance.net/gallery/47747201/Header" data-de="Mehr" target="_blank">More</a>
                 </div>
                 <div class="img" style="background-image: url('assets/imgs/portfolio/header.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47747201/Header')"></div>
 
@@ -138,7 +147,7 @@
             <div class="item flex light">
                 <div class="text flex">
                     <h2 class="reveal">UI</h2>
-                    <a href="https://www.behance.net/gallery/47747487/UI" data-de="Mehr">More</a>
+                    <a href="https://www.behance.net/gallery/47747487/UI" data-de="Mehr" target="_blank">More</a>
                 </div>
                 <div class="img" style="background-image: url('assets/imgs/portfolio/ui.jpg')" onclick="javascript:window.open('https://www.behance.net/gallery/47747487/UI')"></div>
 
@@ -175,7 +184,20 @@
 
                 <textarea name="message" placeholder="Message" data-de="Nachricht"></textarea>
 
-                <button name="send" type="submit" data-de="senden">send</button>
+                <div class="flex">
+                    <div>
+                        <input type="checkbox" name="approval" id="approval" value="approval" required>
+                        <label for="approval">
+                            <span data-de="Ich akzeptiere die">I accept the </span>
+                            <a href="datenschutz" data-de="Datenschutzerklärung">privacy policy</a>
+                            <!--
+                            <span data-de="und">and</span>
+                            <a href="datenschutz" data-de="Allgemeinen Geschäftsbedingungen ">terms and conditions</a>
+                             -->
+                        </label>
+                    </div>
+                    <button name="send" type="submit" data-de="senden">send</button>
+                </div>
             </form>
         </div>
     </section>
@@ -183,16 +205,21 @@
         <div class="content">
             <hr>
             <div class="flex">
-                <ul>
+                <ul class="legal">
                     <li>
-                        <a href="/legaldisclosure">
-                            © Copyright
-                            <span id="year"></span> -
-                            <span data-de="Impressum">Legal Disclosure</span>
+                        © Copyright
+                        <span id="year"></span>
+                    </li>
+                    <li>
+                        <a data-de="Impressum" href="/legaldisclosure">
+                            Legal Disclosure
                         </a>
                     </li>
+                    <li>
+                        <a href="/datenschutz" data-de="Datenschutz">Privacy Policy</a>
+                    </li>
                 </ul>
-                <ul>
+                <ul class="icons">
                     <li>
                         <a href="https://twitter.com/iamblwck" target="_blank">
                             <img class="icon" src="assets/svgs/icons/fontawesome/twitter.svg" alt="Twitter Icon" />
@@ -223,6 +250,7 @@
     <script src="assets/js/language.js"></script>
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/smoothscroll.js"></script>
+    <script src="assets/js/cookies.js"></script>
     <script src="assets/js/nav.js"></script>
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/matomo.js"></script>

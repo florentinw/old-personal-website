@@ -57,14 +57,16 @@
 <body>
     <aside id="navbar">
         <a href="/ ">
-            <img src="assets/svgs/logo.svg " alt="Logo" class="logo " title="logo ">
+            <img src="assets/svgs/logo.svg" alt="Logo" class="logo" title="Florentin - Creative Artist">
         </a>
     </aside>
 
     <main id="page">
         <div class="content">
             <h1>Datenschutzerklärung</h1>
-
+            <p>
+                <a href="/privacypolicy">Privacy Policy (Englisch)</a>
+            </p>
             <p>Wir freuen uns sehr über Ihr Interesse. Datenschutz hat für uns einen besonders hohen Stellenwert. Eine Nutzung
                 der Internetseite ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene
                 Person besondere Services über unsere Internetseite in Anspruch nehmen möchte, könnte jedoch eine Verarbeitung
@@ -248,8 +250,8 @@
                 Basis von einer betroffenen Person an den für die Verarbeitung Verantwortlichen übermittelten personenbezogenen
                 Daten werden für Zwecke der Bearbeitung oder der Kontaktaufnahme zur betroffenen Person gespeichert.
             </p>
-            <p>Zur Übermittlung Ihren Nachrichten setzten wir auf den Drittanbieter "Basin"
-                (<a href="https://usebasin.com">https://usebasin.com</a>), welcher die abgesendeten Formularinhalte auf dessen Server, auch außerhalb der
+            <p>Zur Übermittlung Ihren Nachrichten setzten wir auf den Drittanbieter "Basin" (
+                <a href="https://usebasin.com">https://usebasin.com</a>), welcher die abgesendeten Formularinhalte auf dessen Server, auch außerhalb der
                 EU, für eine weitere Verarbeitung speichert.
             </p>
             <p>Die Datenschutzrichtlinie von Basin finden Sie hier:
@@ -569,13 +571,18 @@
         <div class="content">
             <hr>
             <div class="flex">
-                <ul>
+                <ul class="legal">
                     <li>
-                        <a href="/legaldisclosure">
-                            © Copyright
-                            <span id="year"></span> -
-                            <span data-de="Impressum">Legal Disclosure</span>
+                        © Copyright
+                        <span id="year"></span>
+                    </li>
+                    <li>
+                        <a data-de="Impressum" href="/legaldisclosure">
+                            Legal Disclosure
                         </a>
+                    </li>
+                    <li>
+                        <a href="/datenschutz" data-de="Datenschutz">Privacy Policy</a>
                     </li>
                 </ul>
                 <ul class="icons">
@@ -605,10 +612,8 @@
 
     </footer>
     <!-- Scripts -->
-    <script src="assets/js/jquery-3.3.1.min.js "></script>
-    <script src="assets/js/smoothscroll.js "></script>
-    <script src="assets/js/nav.js "></script>
-    <script src="assets/js/scrollreveal.min.js "></script>
+    <script src="assets/js/language.js "></script>
+    <script src="assets/js/cookies.js"></script>
     <script src="assets/js/matomo.js "></script>
     <script>
         document.getElementById('year').innerHTML = new Date().getFullYear()

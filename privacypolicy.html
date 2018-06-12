@@ -57,13 +57,16 @@
 <body>
     <aside id="navbar">
         <a href="/ ">
-            <img src="assets/svgs/logo.svg " alt="logo" class="logo " title="Logo">
+            <img src="assets/svgs/logo.svg" alt="Logo" class="logo" title="Florentin - Creative Artist">
         </a>
     </aside>
 
     <main id="page">
         <div class="content">
             <h1>Privacy Policy</h1>
+            <p>
+                <a href="/datenschutz">Datenschutz (German)</a>
+            </p>
             <p>We are very delighted that you have shown interest . Data protection is of a particularly high priority for our
                 management. The use of the Internet pages is possible without any indication of personal data; however, if
                 a data subject wants to use special enterprise services via our website, processing of personal data could
@@ -235,12 +238,12 @@
                 If a data subject contacts the controller by e-mail or via a contact form, the personal data transmitted
                 by the data subject are automatically stored. Such personal data transmitted on a voluntary basis by a data
                 subject to the data controller are stored for the purpose of processing or contacting the data subject.</p>
-            <p>To transmit your messages, we use the third party "Basin",
-                (<a href="https://usebasin.com">https://usebasin.com</a>) which stores the submitted form content on its server, also outside the EU, for
+            <p>To transmit your messages, we use the third party "Basin", (
+                <a href="https://usebasin.com">https://usebasin.com</a>) which stores the submitted form content on its server, also outside the EU, for
                 further processing.
             </p>
             <p>
-                    The privacy policy of Basin can be found here:
+                The privacy policy of Basin can be found here:
                 <a href="https://usebasin.com/privacy">https://usebasin.com/privacy</a>
                 <br> You can request a deletion of your data from our service provider here:
                 <a href="https://usebasin.com/gdpr">https://usebasin.com/gdpr</a>
@@ -521,13 +524,18 @@
         <div class="content">
             <hr>
             <div class="flex">
-                <ul>
+                <ul class="legal">
                     <li>
-                        <a href="/legaldisclosure">
-                            © Copyright
-                            <span id="year"></span> -
-                            <span data-de="Impressum">Legal Disclosure</span>
+                        © Copyright
+                        <span id="year"></span>
+                    </li>
+                    <li>
+                        <a data-de="Impressum" href="/legaldisclosure">
+                            Legal Disclosure
                         </a>
+                    </li>
+                    <li>
+                        <a href="/datenschutz" data-de="Datenschutz">Privacy Policy</a>
                     </li>
                 </ul>
                 <ul class="icons">
@@ -557,10 +565,8 @@
 
     </footer>
     <!-- Scripts -->
-    <script src="assets/js/jquery-3.3.1.min.js "></script>
-    <script src="assets/js/smoothscroll.js "></script>
-    <script src="assets/js/nav.js "></script>
-    <script src="assets/js/scrollreveal.min.js "></script>
+    <script src="assets/js/language.js "></script>
+    <script src="assets/js/cookies.js"></script>
     <script src="assets/js/matomo.js "></script>
     <script>
         document.getElementById('year').innerHTML = new Date().getFullYear()

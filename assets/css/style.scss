@@ -165,10 +165,18 @@ h4 {
   font-weight: 500;
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
 p {
   line-height: 1.7;
   font-size: 1em;
-  margin: 0.2em 0;
+  margin: 0.6em 0;
 }
 ul {
   list-style: circle;
@@ -180,10 +188,11 @@ ul {
 
 a {
   text-decoration: none;
+  border-bottom: 0.2em solid black;
   color: inherit;
   transition: 0.2s all ease-in-out;
+  font-weight: 500;
   &:hover {
-    text-decoration: none;
     color: #414141;
     transition: 0.2s all ease-in-out;
   }
@@ -298,6 +307,7 @@ nav {
     list-style: none;
 
     li a {
+      border: none;
       &:hover {
         color: #b9b9b9;
       }
@@ -328,6 +338,9 @@ aside#navbar {
 
   .logo {
     height: 40px;
+  }
+  a {
+    border: none;
   }
 
   img#openbtn {
@@ -441,6 +454,7 @@ section#port {
           width: 100%;
         }
         a {
+          border: none;
           text-transform: uppercase;
           letter-spacing: 0;
           font-weight: 700;
@@ -477,10 +491,11 @@ section#contact {
     }
     form {
       margin: 40px 0;
+      text-align: left;
 
       input[type='text'],
       input[type='email'] {
-        font-size: 0.7em;
+        font-size: 0.7rem;
         font-family: 'Roboto Mono', sans-serif;
         -webkit-appearance: none;
         text-decoration: none;
@@ -500,6 +515,19 @@ section#contact {
           border: 3px solid rgb(245, 245, 245);
           outline: none;
           box-shadow: none;
+        }
+      }
+      input[type='checkbox'] {
+        outline: none;
+        box-shadow: none;
+
+        &:invalid {
+          border: 3px solid rgb(245, 245, 245);
+          outline: none;
+          box-shadow: none;
+        }
+        + label {
+          font-size: 0.8rem;
         }
       }
       select {
@@ -560,18 +588,7 @@ section#contact {
         border: 3px solid rgb(245, 245, 245);
         transition: ease-in-out 0.2s all;
       }
-      button {
-        text-transform: uppercase;
-        display: inline;
-        font-family: 'Roboto Mono', sans-serif;
-        margin: 10px 0;
-        border: none;
-        text-decoration: none;
-        background: initial;
-        font-size: 1.2em;
-        font-weight: 500;
-        cursor: pointer;
-      }
+
       .flex {
         justify-content: space-between;
         flex-wrap: wrap;
@@ -594,6 +611,19 @@ section#contact {
     }
   }
 }
+button {
+  text-transform: uppercase;
+  display: inline;
+  font-family: 'Roboto Mono', sans-serif;
+  border: none;
+  text-decoration: none;
+  background: initial;
+  font-size: 1.2em;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  border-bottom: 3px solid $dark;
+}
 
 /*
 -----------------------
@@ -606,10 +636,9 @@ footer {
     justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 550px) {
       flex-direction: column;
     }
-
     ul {
       list-style: none;
       &.icons {
@@ -617,25 +646,31 @@ footer {
       }
       li {
         display: inline;
-        /*
-        &::after {
-          content: '-';
+
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: -0.04rem;
+        .icon {
+          height: 18px;
+          margin-left: 8px;
         }
-        &:last-of-type::after {
-          content: '';
+        span {
+          display: inline;
         }
-        */
+      }
+      &.legal {
+        li {
+          &::after {
+            content: '-';
+          }
+          &:last-of-type::after {
+            content: '';
+          }
+        }
+      }
+      &.icons {
         a {
-          font-weight: 400;
-          font-size: 14px;
-          letter-spacing: -0.04rem;
-          .icon {
-            height: 18px;
-            margin-left: 8px;
-          }
-          span {
-            display: inline;
-          }
+          border: none;
         }
       }
     }
@@ -669,22 +704,48 @@ JUST A PAGE
 */
 main#page {
   padding-top: 18vh;
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
-  }
   h3 {
     margin-top: 2rem;
     margin-bottom: 0.4em;
-    font-size: 1.3rem;
-    font-weight: 500;
   }
   a {
-    font-weight: 500;
     border-bottom: 2px solid $dark;
   }
+}
+
+/*
+-----------------------
+COOKIE THING
+-----------------------
+*/
+#acceptCookies {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+
+  z-index: 100;
+
+  background-color: rgb(245, 245, 245);
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: $dark;
+
+  padding: 1.5rem;
+
+  width: 80%;
+  max-width: 500px;
+
+  text-align: right;
   p {
-    margin: 0.6em 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  a {
+    border: none;
+  }
+  button {
+    color: $dark;
+    font-size: 0.9rem;
+    border-bottom-color: $dark;
   }
 }

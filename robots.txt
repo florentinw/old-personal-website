@@ -6,8 +6,8 @@ Allow: /assets/imgs/portfolio/
 Disallow: /legaldisclosure
 Disallow: /legaldisclosure.html
 
-Disallow: /datenschutzerklärung
-Disallow: /datenschutzerklärung.html
+Disallow: /datenschutz
+Disallow: /datenschutz.html
 
 Disallow: /privacypolicy
 Disallow: /privacypolicy.html

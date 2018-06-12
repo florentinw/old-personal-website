@@ -158,10 +158,19 @@ h4 {
   font-weight: 500;
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
 p {
   line-height: 1.7;
   font-size: 1em;
-  margin: 0.2em 0;
+  margin: 0.6em 0;
 }
 
 ul {
@@ -175,12 +184,13 @@ ul li {
 
 a {
   text-decoration: none;
+  border-bottom: 0.2em solid black;
   color: inherit;
   transition: 0.2s all ease-in-out;
+  font-weight: 500;
 }
 
 a:hover {
-  text-decoration: none;
   color: #414141;
   transition: 0.2s all ease-in-out;
 }
@@ -299,6 +309,10 @@ nav ul {
   list-style: none;
 }
 
+nav ul li a {
+  border: none;
+}
+
 nav ul li a:hover {
   color: #b9b9b9;
 }
@@ -329,6 +343,10 @@ aside#navbar {
 
 aside#navbar .logo {
   height: 40px;
+}
+
+aside#navbar a {
+  border: none;
 }
 
 aside#navbar img#openbtn {
@@ -475,6 +493,7 @@ section#port .row .item .text h2 {
 }
 
 section#port .row .item .text a {
+  border: none;
   text-transform: uppercase;
   letter-spacing: 0;
   font-weight: 700;
@@ -511,11 +530,12 @@ section#contact .content p {
 
 section#contact .content form {
   margin: 40px 0;
+  text-align: left;
 }
 
 section#contact .content form input[type='text'],
 section#contact .content form input[type='email'] {
-  font-size: 0.7em;
+  font-size: 0.7rem;
   font-family: 'Roboto Mono', sans-serif;
   -webkit-appearance: none;
   text-decoration: none;
@@ -538,6 +558,21 @@ section#contact .content form input[type='email']:invalid {
   border: 3px solid whitesmoke;
   outline: none;
   box-shadow: none;
+}
+
+section#contact .content form input[type='checkbox'] {
+  outline: none;
+  box-shadow: none;
+}
+
+section#contact .content form input[type='checkbox']:invalid {
+  border: 3px solid whitesmoke;
+  outline: none;
+  box-shadow: none;
+}
+
+section#contact .content form input[type='checkbox'] + label {
+  font-size: 0.8rem;
 }
 
 section#contact .content form select {
@@ -601,19 +636,6 @@ section#contact .content form textarea {
   transition: ease-in-out 0.2s all;
 }
 
-section#contact .content form button {
-  text-transform: uppercase;
-  display: inline;
-  font-family: 'Roboto Mono', sans-serif;
-  margin: 10px 0;
-  border: none;
-  text-decoration: none;
-  background: initial;
-  font-size: 1.2em;
-  font-weight: 500;
-  cursor: pointer;
-}
-
 section#contact .content form .flex {
   justify-content: space-between;
   flex-wrap: wrap;
@@ -638,6 +660,20 @@ section#contact .content form .flex input {
   flex-basis: 250px;
 }
 
+button {
+  text-transform: uppercase;
+  display: inline;
+  font-family: 'Roboto Mono', sans-serif;
+  border: none;
+  text-decoration: none;
+  background: initial;
+  font-size: 1.2em;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  border-bottom: 3px solid #111;
+}
+
 /*
 -----------------------
 FOOTER
@@ -653,7 +689,7 @@ footer .flex {
   flex-direction: row;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
   footer .flex {
     flex-direction: column;
   }
@@ -669,29 +705,30 @@ footer .flex ul.icons {
 
 footer .flex ul li {
   display: inline;
-  /*
-        &::after {
-          content: '-';
-        }
-        &:last-of-type::after {
-          content: '';
-        }
-        */
-}
-
-footer .flex ul li a {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.04rem;
 }
 
-footer .flex ul li a .icon {
+footer .flex ul li .icon {
   height: 18px;
   margin-left: 8px;
 }
 
-footer .flex ul li a span {
+footer .flex ul li span {
   display: inline;
+}
+
+footer .flex ul.legal li::after {
+  content: '-';
+}
+
+footer .flex ul.legal li:last-of-type::after {
+  content: '';
+}
+
+footer .flex ul.icons a {
+  border: none;
 }
 
 footer hr {
@@ -723,24 +760,47 @@ main#page {
   padding-top: 18vh;
 }
 
-main#page h1 {
-  font-size: 3rem;
-  font-weight: 700;
-}
-
 main#page h3 {
   margin-top: 2rem;
   margin-bottom: 0.4em;
-  font-size: 1.3rem;
-  font-weight: 500;
 }
 
 main#page a {
-  font-weight: 500;
   border-bottom: 2px solid #111;
 }
 
-main#page p {
-  margin: 0.6em 0;
+/*
+-----------------------
+COOKIE THING
+-----------------------
+*/
+#acceptCookies {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 100;
+  background-color: whitesmoke;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: #111;
+  padding: 1.5rem;
+  width: 80%;
+  max-width: 500px;
+  text-align: right;
+}
+
+#acceptCookies p {
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+#acceptCookies a {
+  border: none;
+}
+
+#acceptCookies button {
+  color: #111;
+  font-size: 0.9rem;
+  border-bottom-color: #111;
 }
 /*# sourceMappingURL=style.css.map */

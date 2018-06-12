@@ -57,7 +57,7 @@
 <body>
     <aside id="navbar">
         <a href="/ ">
-            <img src="assets/svgs/logo.svg " alt="logo " class="logo " title="logo ">
+            <img src="assets/svgs/logo.svg" alt="Logo" class="logo" title="Florentin - Creative Artist">
         </a>
     </aside>
 
@@ -112,7 +112,7 @@
                 The materials from these pages are copyrighted and any unauthorized use may violate copyright laws. </p>
             <br>
             <p>
-                <a data-de="Datenschutzerklärung" href="/datenschutzerklärung">Privacy Policy (German)</a>
+                <a data-de="Datenschutzerklärung" href="/datenschutz">Privacy Policy (German)</a>
             </p>
             <p>
                 <a data-de="Datenschutzerklärung (Englisch)" href="/privacypolicy">Privacy Policy</a>
@@ -124,13 +124,18 @@
         <div class="content">
             <hr>
             <div class="flex">
-                <ul>
+                <ul class="legal">
                     <li>
-                        <a href="/legaldisclosure">
-                            © Copyright
-                            <span id="year"></span> -
-                            <span data-de="Impressum">Legal Disclosure</span>
+                        © Copyright
+                        <span id="year"></span>
+                    </li>
+                    <li>
+                        <a data-de="Impressum" href="/legaldisclosure">
+                            Legal Disclosure
                         </a>
+                    </li>
+                    <li>
+                        <a href="/datenschutz" data-de="Datenschutz">Privacy Policy</a>
                     </li>
                 </ul>
                 <ul class="icons">
@@ -161,10 +166,7 @@
     </footer>
     <!-- Scripts -->
     <script src="assets/js/language.js "></script>
-    <script src="assets/js/jquery-3.3.1.min.js "></script>
-    <script src="assets/js/smoothscroll.js "></script>
-    <script src="assets/js/nav.js "></script>
-    <script src="assets/js/scrollreveal.min.js "></script>
+    <script src="assets/js/cookies.js"></script>
     <script src="assets/js/matomo.js "></script>
     <script>
         document.getElementById('year').innerHTML = new Date().getFullYear()
