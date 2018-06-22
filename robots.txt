@@ -12,5 +12,11 @@ Disallow: /datenschutz.html
 Disallow: /privacypolicy
 Disallow: /privacypolicy.html
 
+Disallow: /agb
+Disallow: /agb.html
+
+Disallow: /legaldisclosure
+Disallow: /legaldisclosure.html
+
 Disallow: /404
 Disallow: /404.html
