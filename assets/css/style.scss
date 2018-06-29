@@ -148,7 +148,6 @@ CUSTOM
 
 $dark: #111;
 $white: #fff;
-
 html,
 body {
   font-size: 18px;
@@ -158,28 +157,40 @@ body {
   letter-spacing: -0.04em;
 }
 
+h1,
+h2,
 h3,
-h4 {
-  font-weight: 500;
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  margin-bottom: 0.4em;
+  font-weight: 600;
 }
 
 h1 {
   font-size: 3rem;
-  font-weight: 700;
 }
+
 h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 1.7rem;
 }
 
 h3 {
   font-size: 1.3rem;
 }
+
+h2,
+h3 {
+  margin-top: 2rem;
+}
+
 p {
   line-height: 1.7;
   font-size: 1em;
   margin: 0.6em 0;
 }
+
 ul {
   list-style: circle;
   li {
@@ -199,10 +210,12 @@ a {
     transition: 0.2s all ease-in-out;
   }
 }
+
 strong,
 b {
   font-weight: 700;
 }
+
 section {
   padding: 75px 0;
 }
@@ -232,6 +245,7 @@ div.list {
   -moz-box-shadow: 0px 0px 19px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 0px 19px 1px rgba(0, 0, 0, 0.3);
 }
+
 .center {
   text-align: center;
 }
@@ -239,18 +253,9 @@ div.list {
 .fullheight {
   height: 100vh;
 }
+
 .fullwidth {
   width: 100%;
-}
-.dab {
-  &:hover {
-    color: red;
-    background: url('./../imgs/dab.png');
-    background-position: center;
-    background-size: cover;
-    height: 20px;
-    width: 20px;
-  }
 }
 
 /*
@@ -258,9 +263,9 @@ div.list {
 FLEX
 -----------------------
 */
+
 .flex {
   display: flex;
-
   &.horizontal-center {
     justify-content: center;
   }
@@ -269,6 +274,7 @@ FLEX
     align-content: center;
   }
 }
+
 .text {
   &.right {
     text-align: right;
@@ -286,6 +292,7 @@ FLEX
 NAV
 -----------------------
 */
+
 nav {
   transform: translateY(-100%);
   position: fixed;
@@ -294,7 +301,6 @@ nav {
   overflow-x: hidden;
   transition: 0.5s all ease-in-out;
   color: #fff;
-
   #closebtn {
     height: 30px;
     width: 30px;
@@ -303,11 +309,9 @@ nav {
     top: 50px;
     right: 70px;
   }
-
   ul {
     cursor: pointer;
     list-style: none;
-
     li a {
       border: none;
       &:hover {
@@ -322,6 +326,7 @@ nav {
 NAVBAR
 -----------------------
 */
+
 aside#navbar {
   box-sizing: border-box;
   position: fixed;
@@ -333,18 +338,15 @@ aside#navbar {
   z-index: 1;
   width: 100%;
   margin: 0;
-
   @media only screen and (max-width: 1100px) {
     background: #fff;
   }
-
   .logo {
     height: 40px;
   }
   a {
     border: none;
   }
-
   img#openbtn {
     height: 30px;
     width: 30px;
@@ -358,17 +360,18 @@ aside#navbar {
 HEADER
 -----------------------
 */
+
 header#about {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 250px;
   padding-bottom: 75px;
-
   .text {
     padding-top: 32vh;
     h1 {
-      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 0em;
       font-size: 220px;
       color: #aaa;
       transition: ease-in-out 0.1s all;
@@ -418,6 +421,7 @@ header#about {
 PORTFOLIO
 -----------------------
 */
+
 section#port {
   .row {
     flex-wrap: wrap;
@@ -425,7 +429,6 @@ section#port {
       flex: 1;
       flex-basis: 500px;
       height: 40vh;
-
       .img,
       .text {
         width: 50%;
@@ -437,7 +440,6 @@ section#port {
         cursor: pointer;
         transition: all ease-in-out 0.5s;
         filter: grayscale(1);
-
         &:hover {
           filter: grayscale(0);
         }
@@ -450,10 +452,9 @@ section#port {
         @media only screen and (max-width: 600px) {
           padding: 20px;
         }
-
         h2 {
-          font-size: 1.7em;
           width: 100%;
+          margin: 0;
         }
         a {
           border: none;
@@ -483,18 +484,15 @@ CONTACT
 section#contact {
   .content {
     max-width: 800px;
-    text-align: center;
     h2 {
-      font-size: 2.5em;
-      font-weight: 600;
+      font-size: 2.5rem;
     }
     p {
-      margin: 10px auto;
+      max-width: 700px;
     }
     form {
       margin: 40px 0;
       text-align: left;
-
       input[type='text'],
       input[type='email'] {
         font-size: 0.7rem;
@@ -522,13 +520,12 @@ section#contact {
       input[type='checkbox'] {
         outline: none;
         box-shadow: none;
-
         &:invalid {
           border: 3px solid rgb(245, 245, 245);
           outline: none;
           box-shadow: none;
         }
-        + label {
+        +label {
           font-size: 0.8rem;
         }
       }
@@ -542,15 +539,12 @@ section#contact {
         background-color: rgb(245, 245, 245);
         box-sizing: border-box;
         border: 3px solid rgb(245, 245, 245);
-
         font-family: 'Roboto Mono', sans-serif;
         font-size: 0.7em;
         letter-spacing: 0.3px;
         font-weight: 300;
-
         padding: 13px 20px;
         width: 100%;
-
         background-image: url(../imgs/select-arrow.png);
         background-position: right;
         background-repeat: no-repeat;
@@ -590,11 +584,9 @@ section#contact {
         border: 3px solid rgb(245, 245, 245);
         transition: ease-in-out 0.2s all;
       }
-
       .flex {
         justify-content: space-between;
         flex-wrap: wrap;
-
         input,
         select {
           flex: 1;
@@ -613,6 +605,7 @@ section#contact {
     }
   }
 }
+
 button {
   text-transform: uppercase;
   display: inline;
@@ -632,6 +625,7 @@ button {
 FOOTER
 -----------------------
 */
+
 footer {
   padding: 50px 0;
   .flex {
@@ -648,7 +642,6 @@ footer {
       }
       li {
         display: inline;
-
         font-weight: 400;
         font-size: 14px;
         letter-spacing: -0.04rem;
@@ -667,6 +660,9 @@ footer {
           }
           &:last-of-type::after {
             content: '';
+          }
+          &:first-of-type::after {
+            content: '|';
           }
         }
       }
@@ -688,6 +684,7 @@ MEGA OP MULTILANGUAGE THING
 (works like 4%)
 -----------------------
 */
+
 /*
 body:lang(de) {
   [lang-de] {
@@ -704,15 +701,11 @@ body:lang(de) {
 JUST A PAGE
 -----------------------
 */
+
 main#page {
   padding-top: 18vh;
-  h3,
-  h2 {
-    margin-top: 2rem;
-    margin-bottom: 0.4em;
-  }
-  a {
-    border-bottom: 2px solid $dark;
+  h1 {
+    margin: 0;
   }
   ul {
     list-style: disc;
@@ -726,23 +719,19 @@ main#page {
 COOKIE THING
 -----------------------
 */
+
 #acceptCookies {
   position: fixed;
   right: 50px;
   bottom: 50px;
-
   z-index: 100;
-
   background-color: rgb(245, 245, 245);
   border-radius: 2px;
   box-sizing: border-box;
   color: $dark;
-
   padding: 1.5rem;
-
   width: 80%;
   max-width: 500px;
-
   text-align: right;
   p {
     font-size: 0.85rem;

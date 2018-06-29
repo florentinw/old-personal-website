@@ -156,7 +156,8 @@
     </section>
     <section id="contact">
         <div class="content">
-            <h2 class="reveal" data-de="Lass mal zusammenarbeiten!">Let's work together!</h2>
+            <h2 class="reveal" data-de="Lass mal<br>zusammenarbeiten!">Let's work
+                <br>together!</h2>
             <p class="reveal" data-de="Erzähl' mir von Deiner Idee - damit wir bei Deinem nächsten Projekt zusammenarbeiten können!">
                 Just tell me about your thing — so we can work together on your next project!
             </p>
@@ -205,8 +206,7 @@
             <div class="flex">
                 <ul class="legal">
                     <li>
-                        © Copyright
-                        <span id="year"></span>
+                        &copy; 2015-<span id="year"></span> Florentin
                     </li>
                     <li>
                         <a data-de="Impressum" href="/legaldisclosure">
@@ -267,18 +267,31 @@
             var ageDate = new Date(ageDifMs);
             return Math.abs(ageDate.getUTCFullYear() - 1970);
         }
+
         function getRandomGradient() {
-            const gradients = [
-                { from: "#ecd95b", to: "#ef5f52" },
-                { from: "#478CBE", to: "#59E4DA" },
-                { from: "#b5f155", to: "#3dc074" },
-                { from: "#C04848", to: "#480048" }
+            const gradients = [{
+                    from: "#ecd95b",
+                    to: "#ef5f52"
+                },
+                {
+                    from: "#478CBE",
+                    to: "#59E4DA"
+                },
+                {
+                    from: "#b5f155",
+                    to: "#3dc074"
+                },
+                {
+                    from: "#C04848",
+                    to: "#480048"
+                }
             ]
             return gradients.random()
         }
 
         let randomGradient = getRandomGradient()
-        document.getElementById('content-hello').style.background = "-webkit-linear-gradient(right, " + randomGradient.from + ", " + randomGradient.to + ")"
+        document.getElementById('content-hello').style.background = "-webkit-linear-gradient(right, " + randomGradient.from +
+            ", " + randomGradient.to + ")"
         document.getElementById('content-hello').style["-webkit-background-clip"] = "text"
         document.getElementById('content-hello').style["-webkit-text-fill-color"] = "transparent"
 
