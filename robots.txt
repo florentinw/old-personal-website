@@ -1,6 +1,7 @@
 User-agent: *
 
 Disallow: /assets/
+Allow: /assets/imgs/meta/
 Allow: /assets/imgs/portfolio/
 
 Disallow: /legaldisclosure
