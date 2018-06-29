@@ -428,7 +428,21 @@ section#port {
     .item {
       flex: 1;
       flex-basis: 500px;
-      height: 40vh;
+      height: 70vh;
+      max-height: 350px;
+      @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        .img,
+        .text {
+          width: 100% !important;
+        }
+      }
+      @media only screen and (max-width: 350px) {
+        max-height: 50vh;
+        .text {
+          display: none;
+        }
+      }
       .img,
       .text {
         width: 50%;
