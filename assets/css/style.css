@@ -877,6 +877,10 @@ COOKIE THING
   text-align: right;
 }
 
+#acceptCookies h3 {
+  margin: 0;
+}
+
 #acceptCookies p {
   font-size: 0.85rem;
   line-height: 1.4;
