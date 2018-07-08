@@ -10,7 +10,9 @@ applet,
 object,
 iframe,
 h1,
+main#page .title,
 h2,
+main#page .sub-title,
 h3,
 h4,
 h5,
@@ -151,8 +153,11 @@ body {
   letter-spacing: -0.04em;
 }
 
+
 h1,
+main#page .title,
 h2,
+main#page .sub-title,
 h3,
 h4,
 h5,
@@ -162,11 +167,15 @@ h6 {
   font-weight: 600;
 }
 
-h1 {
+
+h1,
+main#page .title {
   font-size: 3rem;
 }
 
-h2 {
+
+h2,
+main#page .sub-title {
   font-size: 1.7rem;
 }
 
@@ -174,7 +183,9 @@ h3 {
   font-size: 1.3rem;
 }
 
+
 h2,
+main#page .sub-title,
 h3 {
   margin-top: 2rem;
 }
@@ -392,7 +403,7 @@ header#about .text {
   padding-top: 32vh;
 }
 
-header#about .text h1 {
+header#about .text h1, header#about .text main#page .title, main#page header#about .text .title {
   line-height: 1;
   margin-bottom: 0em;
   font-size: 220px;
@@ -405,25 +416,25 @@ header#about .text h1 {
 }
 
 @media only screen and (max-width: 1100px) {
-  header#about .text h1 {
+  header#about .text h1, header#about .text main#page .title, main#page header#about .text .title {
     font-size: 190px;
   }
 }
 
 @media only screen and (max-width: 870px) {
-  header#about .text h1 {
+  header#about .text h1, header#about .text main#page .title, main#page header#about .text .title {
     font-size: 140px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  header#about .text h1 {
+  header#about .text h1, header#about .text main#page .title, main#page header#about .text .title {
     font-size: 90px;
   }
 }
 
 @media only screen and (max-width: 420px) {
-  header#about .text h1 {
+  header#about .text h1, header#about .text main#page .title, main#page header#about .text .title {
     font-size: 70px;
   }
 }
@@ -544,7 +555,7 @@ section#port .row .item .text {
   }
 }
 
-section#port .row .item .text h2 {
+section#port .row .item .text h2, section#port .row .item .text main#page .sub-title, main#page section#port .row .item .text .sub-title {
   width: 100%;
   margin: 0;
 }
@@ -575,7 +586,7 @@ section#contact .content {
   max-width: 800px;
 }
 
-section#contact .content h2 {
+section#contact .content h2, section#contact .content main#page .sub-title, main#page section#contact .content .sub-title {
   font-size: 2.5rem;
 }
 
@@ -846,7 +857,7 @@ main#page {
   padding-top: 18vh;
 }
 
-main#page h1 {
+main#page h1, main#page .title {
   margin: 0;
 }
 
@@ -854,6 +865,29 @@ main#page ul {
   list-style: disc;
   list-style-position: outside;
   margin-left: 2rem;
+}
+
+main#page div.collection {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -12px;
+}
+
+main#page div.collection img {
+  height: 350px;
+  width: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 12px;
+}
+
+main#page img.image {
+  width: 100%;
+  margin: 2rem 0;
 }
 
 /*

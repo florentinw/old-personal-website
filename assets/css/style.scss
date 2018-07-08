@@ -539,7 +539,7 @@ section#contact {
           outline: none;
           box-shadow: none;
         }
-        +label {
+        + label {
           font-size: 0.8rem;
         }
       }
@@ -725,6 +725,29 @@ main#page {
     list-style: disc;
     list-style-position: outside;
     margin-left: 2rem;
+  }
+  .title {
+    @extend h1;
+  }
+  .sub-title {
+    @extend h2;
+  }
+  div.collection {
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -12px;
+    img {
+      // flex-basis: 300px;
+      height: 350px;
+      width: 350px;
+      object-fit: cover;
+      margin: 12px;
+    }
+  }
+  img.image {
+    width: 100%;
+    margin: 2rem 0;
   }
 }
 

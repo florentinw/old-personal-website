@@ -62,27 +62,107 @@
     </aside>
 
     <main id="page">
-        <div class="content">
-            <h1>404</h1>
-            <h3 data-de="Scheinbar bist du verloren gegangen.">Looks like you got lost.</h3>
-            <p data-de="Deine gesuchte Seite konnte nicht gefunden werden. Sorry!">The page you looking found is not found. Sorry!</p>
-            <p>
-                <a data-de="Zurück" href="/">Go back</a>
-            </p>
-
+        <div id="render" class="content">
         </div>
     </main>
 
+    <footer>
+        <div class="content">
+            <hr>
+            <div class="flex">
+                <ul class="legal">
+                    <li>
+                        © Copyright
+                        <span id="year"></span>
+                    </li>
+                    <li>
+                        <a data-de="Impressum" href="/legaldisclosure">
+                            Legal Disclosure
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/datenschutz" data-de="Datenschutz">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="/agb" data-de="Allgemeine Geschäftsbedingungen">Terms of Conditions</a>
+                    </li>
+                </ul>
+                <ul class="icons">
+                    <li>
+                        <a href="https://twitter.com/florentin" target="_blank">
+                            <img class="icon" src="/assets/svgs/icons/fontawesome/twitter.svg" alt="Twitter Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://dribbble.com/florentin" target="_blank">
+                            <img class="icon" src="/assets/svgs/icons/fontawesome/dribbble.svg" alt="Dribbble Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.behance.net/fl_ooo" target="_blank">
+                            <img class="icon" src="/assets/svgs/icons/fontawesome/behance.svg" alt="Behance Icon">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://discordapp.com/invite/PGv5TR3" target="_blank">
+                            <img class="icon" src="/assets/svgs/icons/fontawesome/discord.svg" alt="Discord Icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <!-- Scripts -->
-    <script src="/assets/js/language.js "></script>
     <script src="/assets/js/jquery-3.3.1.min.js "></script>
-    <script src="/assets/js/smoothscroll.js "></script>
-    <script src="/assets/js/nav.js "></script>
     <script src="/assets/js/scrollreveal.min.js "></script>
     <script src="/assets/js/matomo.js "></script>
+    <script src="/assets/js/be.js"></script>
     <script>
-        document.getElementById('year').innerHTML = new Date().getFullYear()
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+
+
+        (async function () {
+            let render = ''
+
+            let slug = location.pathname.slice(1);
+            let projectsIDs = {
+                'branding': '48073889',
+                'web': '47747487',
+                'ad': '47740683',
+                'header': '47747201',
+            }
+            if (projectsIDs[slug]) {
+                be('jKJQZQhlSP4xoRrhhwl0C38glxD9jf2a');
+                let id = projectsIDs[slug]
+                let results = await be.project(id)
+                let contents = results.project.modules
+                contents.map(item => {
+                    switch (item.type) {
+                        case 'text':
+                            return render += item.text
+                            break;
+
+                        case 'image':
+                            return render += `<img class="image" src="${item.sizes.max_1200}">`
+                            break;
+
+                        case 'media_collection':
+                            collection = item.components.map(component => `<img  src="${component.sizes.disp}">`)
+                            return render += `<div class="collection">${collection.join('')}</div>`
+                            break;
+                        default:
+                            console.log(item)
+                            break;
+                    }
+                })
+            }
+            else {
+                render = '<h1>404</h1><h3 data-de="Scheinbar bist du verloren gegangen.">Looks like you got lost.</h3><p data-de="Deine gesuchte Seite konnte nicht gefunden werden. Sorry!">The page you looking found is not found. Sorry!</p><p> <a data-de="Zurück" href="/">Go back</a></p>'
+            }
+            document.getElementById('render').innerHTML += render
+        })()
+
     </script>
 </body>
 
