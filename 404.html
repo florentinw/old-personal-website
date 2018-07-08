@@ -133,10 +133,16 @@
                 'header': '47747201',
             }
             if (projectsIDs[slug]) {
-                be('jKJQZQhlSP4xoRrhhwl0C38glxD9jf2a');
-                let id = projectsIDs[slug]
-                let results = await be.project(id)
-                let contents = results.project.modules
+                let contents = {}
+                if (sessionStorage.getItem(`behance-${slug}`)) {
+                    contents = sessionStorage.getItem(`behance-${slug}`)
+                } else {
+                    be('jKJQZQhlSP4xoRrhhwl0C38glxD9jf2a');
+                    let id = projectsIDs[slug]
+                    let results = await be.project(id)
+                    contents = results.project.modules
+                    sessionStorage.setItem(`behance-${slug}`, contents);
+                }
                 contents.map(item => {
                     switch (item.type) {
                         case 'text':
