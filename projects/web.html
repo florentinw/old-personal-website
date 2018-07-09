@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <!-- Normal Tags-->
-    <title>Florentin - 404</title>
-    <meta name="keywords" content="flooo.me, florentin.design flo, florentin, design, designer, creative, artist, freelancer, german, portfolio, social media, simple, personal, black and white, logo, ad, advertising, ui, user interface, web, web design, onepage, dribbble, behance, twitter">
+    <title>Florentin - Web</title>
+    <meta name="keywords" content="flooo.me, florentin.design flo, florentin, design, designer, creative, artist, freelancer, german, portfolio, social media, simple, personal, black and white, logo, ad, Web, ui, user interface, web, web design, onepage, dribbble, behance, twitter">
 
     <meta name="apple-mobile-web-app-title" content="Florentin">
     <meta name="application-name" content="Florentin">
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://florentin.design" />
     <meta property="og:site_name" content="florentin.design" />
-    <meta property="og:title" content="Florentin - 404" />
+    <meta property="og:title" content="Florentin - Web" />
     <meta property="og:image" content="https://florentin.design/assets/imgs/meta/card.png">
     <meta property="og:image:secure_url" content="https://florentin.design/assets/imgs/meta/card.png">
 
@@ -30,11 +30,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@florentin">
     <meta name="twitter:creator" content="@florentin">
-    <meta name="twitter:title" content="Florentin - 404">
+    <meta name="twitter:title" content="Florentin - Web">
     <meta name="twitter:image" content="https://florentin.design/assets/imgs/meta/card.png">
 
     <!-- Schema.org Markup für Google+ -->
-    <meta itemprop="name" content="Florentin - 404">
+    <meta itemprop="name" content="Florentin - Web">
     <meta itemprop="image" content="https://florentin.design/assets/imgs/meta/card.png">
 
     <!-- Icons -->
@@ -62,13 +62,7 @@
     </aside>
 
     <main id="page">
-        <div class="content">
-            <h1>404</h1>
-            <h3 data-de="Scheinbar bist du verloren gegangen.">Looks like you got lost.</h3>
-            <p data-de="Deine gesuchte Seite konnte nicht gefunden werden. Sorry!">The page you looking found is not found. Sorry!</p>
-            <p>
-                <a data-de="Zurück" href="/">Go back</a>
-            </p>
+        <div id="render" class="content">
         </div>
     </main>
 
@@ -126,6 +120,42 @@
     <script src="/assets/js/be.js"></script>
     <script>
         document.getElementById('year').innerHTML = new Date().getFullYear();
+        (async function () {
+            // Fetch
+            let id = '47747487';
+            let contents = {}
+            if (sessionStorage.getItem(`behance-${id}`)) {
+                contents = JSON.parse(sessionStorage.getItem(`behance-${id}`))
+            } else {
+                be('jKJQZQhlSP4xoRrhhwl0C38glxD9jf2a');
+                let results = await be.project(id)
+                contents = results.project.modules
+                sessionStorage.setItem(`behance-${id}`, JSON.stringify(contents));
+            }
+
+            // Render
+            let render = ''
+            contents.map(item => {
+                switch (item.type) {
+                    case 'text':
+                        return render += item.text
+                        break;
+
+                    case 'image':
+                        return render += `<img class="image" src="${item.sizes.max_1200}">`
+                        break;
+
+                    case 'media_collection':
+                        collection = item.components.map(component => `<img  src="${component.sizes.disp}">`)
+                        return render += `<div class="collection">${collection.join('')}</div>`
+                        break;
+                    default:
+                        console.log(item)
+                        break;
+                }
+            })
+            document.getElementById('render').innerHTML += render
+        })()
     </script>
 </body>
 

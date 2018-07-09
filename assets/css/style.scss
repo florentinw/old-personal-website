@@ -732,6 +732,9 @@ main#page {
   .sub-title {
     @extend h2;
   }
+  span.bold {
+    @extend b;
+  }
   div.collection {
     margin: 2rem 0;
     display: flex;

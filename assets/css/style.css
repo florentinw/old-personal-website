@@ -44,6 +44,7 @@ sup,
 tt,
 var,
 b,
+main#page span.bold,
 u,
 i,
 center,
@@ -221,7 +222,8 @@ a:hover {
 }
 
 strong,
-b {
+b,
+main#page span.bold {
   font-weight: 700;
 }
 
