@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <!-- Normal Tags-->
-    <title>Florentin - Advertising</title>
+    <title>Florentin - Branding</title>
     <meta name="keywords" content="flooo.me, florentin.design flo, florentin, design, designer, creative, artist, freelancer, german, portfolio, social media, simple, personal, black and white, logo, ad, advertising, ui, user interface, web, web design, onepage, dribbble, behance, twitter">
 
     <meta name="apple-mobile-web-app-title" content="Florentin">
@@ -22,7 +22,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://florentin.design" />
     <meta property="og:site_name" content="florentin.design" />
-    <meta property="og:title" content="Florentin - Advertising" />
+    <meta property="og:title" content="Florentin - Branding" />
     <meta property="og:image" content="https://florentin.design/assets/imgs/meta/card.png">
     <meta property="og:image:secure_url" content="https://florentin.design/assets/imgs/meta/card.png">
 
@@ -30,11 +30,11 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@florentin">
     <meta name="twitter:creator" content="@florentin">
-    <meta name="twitter:title" content="Florentin - Advertising">
+    <meta name="twitter:title" content="Florentin - Branding">
     <meta name="twitter:image" content="https://florentin.design/assets/imgs/meta/card.png">
 
     <!-- Schema.org Markup für Google+ -->
-    <meta itemprop="name" content="Florentin - Advertising">
+    <meta itemprop="name" content="Florentin - Branding">
     <meta itemprop="image" content="https://florentin.design/assets/imgs/meta/card.png">
 
     <!-- Icons -->
@@ -55,6 +55,15 @@
 </head>
 
 <body>
+    <div id="acceptCookies">
+        <h3>Cookies</h3>
+        <p data-de="Meine Website verwendet Cookies.<br>Indem du fortfährst, stimmst du der Verwendung von Cookies zu.">My website uses cookies.
+            <br>By continuing, you agree to the use of cookies.
+            <br>
+            <a href="datenschutz" data-de="Mehr Informationen">More Info</a>
+        </p>
+        <button onclick="javascript:acceptCookies()" data-de="Schließen">Close</button>
+    </div>
     <aside id="navbar">
         <a href="/">
             <img src="/assets/svgs/logo.svg " alt="Logo" class="logo " title="logo ">
@@ -114,15 +123,14 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/assets/js/jquery-3.3.1.min.js "></script>
-    <script src="/assets/js/scrollreveal.min.js "></script>
+    <script src="/assets/js/cookies.js "></script>
     <script src="/assets/js/matomo.js "></script>
     <script src="/assets/js/be.js"></script>
     <script>
         document.getElementById('year').innerHTML = new Date().getFullYear();
         (async function () {
             // Fetch
-            let id = '47740683';
+            let id = '48073889';
             let contents = {}
             if (sessionStorage.getItem(`behance-${id}`)) {
                 contents = JSON.parse(sessionStorage.getItem(`behance-${id}`))

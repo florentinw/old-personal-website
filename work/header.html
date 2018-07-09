@@ -55,6 +55,15 @@
 </head>
 
 <body>
+    <div id="acceptCookies">
+        <h3>Cookies</h3>
+        <p data-de="Meine Website verwendet Cookies.<br>Indem du fortfährst, stimmst du der Verwendung von Cookies zu.">My website uses cookies.
+            <br>By continuing, you agree to the use of cookies.
+            <br>
+            <a href="datenschutz" data-de="Mehr Informationen">More Info</a>
+        </p>
+        <button onclick="javascript:acceptCookies()" data-de="Schließen">Close</button>
+    </div>
     <aside id="navbar">
         <a href="/">
             <img src="/assets/svgs/logo.svg " alt="Logo" class="logo " title="logo ">
@@ -114,8 +123,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="/assets/js/jquery-3.3.1.min.js "></script>
-    <script src="/assets/js/scrollreveal.min.js "></script>
+    <script src="/assets/js/cookies.js "></script>
     <script src="/assets/js/matomo.js "></script>
     <script src="/assets/js/be.js"></script>
     <script>
