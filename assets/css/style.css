@@ -869,19 +869,24 @@ main#page ul {
   margin-left: 2rem;
 }
 
+main#page .caption {
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
 main#page div.collection {
-  margin: 2rem 0;
+  margin: 2rem -12px !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -12px;
 }
 
 main#page div.collection img {
-  height: 350px;
-  width: 350px;
+  -ms-flex-preferred-size: 350px;
+      flex-basis: 350px;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 12px;

@@ -735,15 +735,17 @@ main#page {
   span.bold {
     @extend b;
   }
+  .caption {
+    font-size: 0.7rem;
+    font-weight: bold;
+    line-height: 1.4;
+  }
   div.collection {
-    margin: 2rem 0;
+    margin: 2rem -12px !important;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -12px;
     img {
-      // flex-basis: 300px;
-      height: 350px;
-      width: 350px;
+      flex-basis: 350px;
       object-fit: cover;
       margin: 12px;
     }
