@@ -148,6 +148,8 @@ CUSTOM
 
 $dark: #111;
 $white: #fff;
+$lightgray: rgb(245, 245, 245);
+$darkgray: rgb(170, 170, 170);
 html,
 body {
   font-size: 18px;
@@ -539,7 +541,7 @@ section#contact {
           outline: none;
           box-shadow: none;
         }
-        + label {
+        +label {
           font-size: 0.8rem;
         }
       }
@@ -726,33 +728,39 @@ main#page {
     list-style-position: outside;
     margin-left: 2rem;
   }
-  .title {
-    @extend h1;
-  }
-  .sub-title {
-    @extend h2;
-  }
-  span.bold {
-    @extend b;
-  }
-  .caption {
-    font-size: 0.7rem;
-    font-weight: bold;
-    line-height: 1.4;
-  }
-  div.collection {
-    margin: 2rem -12px !important;
-    display: flex;
-    flex-wrap: wrap;
-    img {
-      flex-basis: 350px;
-      object-fit: cover;
-      margin: 12px;
+  #render {
+    line-height: 1.6;
+    .title {
+      @extend h1;
     }
-  }
-  img.image {
-    width: 100%;
-    margin: 2rem 0;
+    .sub-title {
+      @extend h2;
+    }
+    span.bold {
+      @extend b;
+    }
+    .caption {
+      font-size: 0.7rem;
+      font-weight: bold;
+      line-height: 1;
+      color: $darkgray;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.3px
+    }
+    div.collection {
+      margin: 2rem -12px !important;
+      display: flex;
+      flex-wrap: wrap;
+      img {
+        flex-basis: 350px;
+        object-fit: cover;
+        margin: 12px;
+      }
+    }
+    img.image {
+      width: 100%;
+      margin: 3rem 0 0 0;
+    }
   }
 }
 

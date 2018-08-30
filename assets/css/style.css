@@ -10,9 +10,9 @@ applet,
 object,
 iframe,
 h1,
-main#page .title,
+main#page #render .title,
 h2,
-main#page .sub-title,
+main#page #render .sub-title,
 h3,
 h4,
 h5,
@@ -44,7 +44,7 @@ sup,
 tt,
 var,
 b,
-main#page span.bold,
+main#page #render span.bold,
 u,
 i,
 center,
@@ -156,9 +156,9 @@ body {
 
 
 h1,
-main#page .title,
+main#page #render .title,
 h2,
-main#page .sub-title,
+main#page #render .sub-title,
 h3,
 h4,
 h5,
@@ -170,13 +170,13 @@ h6 {
 
 
 h1,
-main#page .title {
+main#page #render .title {
   font-size: 3rem;
 }
 
 
 h2,
-main#page .sub-title {
+main#page #render .sub-title {
   font-size: 1.7rem;
 }
 
@@ -186,7 +186,7 @@ h3 {
 
 
 h2,
-main#page .sub-title,
+main#page #render .sub-title,
 h3 {
   margin-top: 2rem;
 }
@@ -223,7 +223,7 @@ a:hover {
 
 strong,
 b,
-main#page span.bold {
+main#page #render span.bold {
   font-weight: 700;
 }
 
@@ -405,7 +405,7 @@ header#about .text {
   padding-top: 32vh;
 }
 
-header#about .text h1, header#about .text main#page .title, main#page header#about .text .title {
+header#about .text h1, header#about .text main#page #render .title, main#page #render header#about .text .title {
   line-height: 1;
   margin-bottom: 0em;
   font-size: 220px;
@@ -418,25 +418,25 @@ header#about .text h1, header#about .text main#page .title, main#page header#abo
 }
 
 @media only screen and (max-width: 1100px) {
-  header#about .text h1, header#about .text main#page .title, main#page header#about .text .title {
+  header#about .text h1, header#about .text main#page #render .title, main#page #render header#about .text .title {
     font-size: 190px;
   }
 }
 
 @media only screen and (max-width: 870px) {
-  header#about .text h1, header#about .text main#page .title, main#page header#about .text .title {
+  header#about .text h1, header#about .text main#page #render .title, main#page #render header#about .text .title {
     font-size: 140px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  header#about .text h1, header#about .text main#page .title, main#page header#about .text .title {
+  header#about .text h1, header#about .text main#page #render .title, main#page #render header#about .text .title {
     font-size: 90px;
   }
 }
 
 @media only screen and (max-width: 420px) {
-  header#about .text h1, header#about .text main#page .title, main#page header#about .text .title {
+  header#about .text h1, header#about .text main#page #render .title, main#page #render header#about .text .title {
     font-size: 70px;
   }
 }
@@ -557,7 +557,7 @@ section#port .row .item .text {
   }
 }
 
-section#port .row .item .text h2, section#port .row .item .text main#page .sub-title, main#page section#port .row .item .text .sub-title {
+section#port .row .item .text h2, section#port .row .item .text main#page #render .sub-title, main#page #render section#port .row .item .text .sub-title {
   width: 100%;
   margin: 0;
 }
@@ -588,7 +588,7 @@ section#contact .content {
   max-width: 800px;
 }
 
-section#contact .content h2, section#contact .content main#page .sub-title, main#page section#contact .content .sub-title {
+section#contact .content h2, section#contact .content main#page #render .sub-title, main#page #render section#contact .content .sub-title {
   font-size: 2.5rem;
 }
 
@@ -859,7 +859,7 @@ main#page {
   padding-top: 18vh;
 }
 
-main#page h1, main#page .title {
+main#page h1, main#page #render .title {
   margin: 0;
 }
 
@@ -869,13 +869,20 @@ main#page ul {
   margin-left: 2rem;
 }
 
-main#page .caption {
-  font-size: 0.7rem;
-  font-weight: bold;
-  line-height: 1.4;
+main#page #render {
+  line-height: 1.6;
 }
 
-main#page div.collection {
+main#page #render .caption {
+  font-size: 0.7rem;
+  font-weight: bold;
+  line-height: 1;
+  color: #aaaaaa;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.3px;
+}
+
+main#page #render div.collection {
   margin: 2rem -12px !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -884,7 +891,7 @@ main#page div.collection {
       flex-wrap: wrap;
 }
 
-main#page div.collection img {
+main#page #render div.collection img {
   -ms-flex-preferred-size: 350px;
       flex-basis: 350px;
   -o-object-fit: cover;
@@ -892,9 +899,9 @@ main#page div.collection img {
   margin: 12px;
 }
 
-main#page img.image {
+main#page #render img.image {
   width: 100%;
-  margin: 2rem 0;
+  margin: 3rem 0 0 0;
 }
 
 /*
