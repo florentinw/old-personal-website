@@ -1,7 +1,7 @@
 const language = (navigator.languages && navigator.languages[0]) || navigator.language || navigator.userLanguage || navigator.browserLanguage || 'en'
 let multilangElements = document.querySelectorAll('[data-de]')
 for (const elem of multilangElements) {
-  if (language.indexOf('de') > -1) {
+  if (language.toLowerCase().includes('de') > -1) {
     switch (elem.nodeName) {
       case 'INPUT':
       case 'TEXTAREA':
