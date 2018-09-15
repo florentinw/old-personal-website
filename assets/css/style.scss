@@ -745,18 +745,21 @@ main#page {
       line-height: 1;
       color: $darkgray;
       margin-bottom: 0.2rem;
-      letter-spacing: 0.3px
+      letter-spacing: 0.3px;
     }
     div.collection {
-      margin: 2rem -12px !important;
       display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
+      align-items: center;
+      margin: 2rem -12px !important;
       img {
-        flex-basis: 350px;
-        object-fit: cover;
+        flex-grow: 1;
+        flex-basis: 300px;
+        //min-width: 300px;
         margin: 12px;
       }
-    }
+    } 
     img.image {
       width: 100%;
       margin: 3rem 0 0 0;
