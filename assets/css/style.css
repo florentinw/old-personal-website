@@ -231,6 +231,21 @@ section {
   padding: 75px 0;
 }
 
+::-moz-selection {
+  background: whitesmoke;
+  /* WebKit/Blink Browsers */
+}
+
+::selection {
+  background: whitesmoke;
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: whitesmoke;
+  /* Gecko Browsers */
+}
+
 /*
 -----------------------
 CLASSES
