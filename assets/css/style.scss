@@ -760,11 +760,12 @@ main#page {
       flex-wrap: wrap;
       align-items: center;
       margin: 2rem -12px !important;
-      img {
-        flex-grow: 1;
-        flex-basis: 300px;
-        //min-width: 300px;
+      div.col_img {
+        flex: 1 300px;
         margin: 12px;
+        img {
+          width: 100%;
+        }
       }
     } 
     img.image {

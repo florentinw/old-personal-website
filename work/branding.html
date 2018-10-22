@@ -155,7 +155,7 @@
                         break;
 
                     case 'media_collection':
-                        collection = item.components.map(component => `<img  src="${component.sizes.disp}">`)
+                        collection = item.components.map(component => `<div class="col_img"><img  src="${component.sizes.disp}"></div>`)
                         return render += `<div class="collection">${collection.join('')}</div>`
                         break;
                     default:

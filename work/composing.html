@@ -57,7 +57,8 @@
 <body>
     <div id="acceptCookies">
         <h3>Cookies</h3>
-        <p data-de="Meine Website verwendet Cookies.<br>Indem du fortfährst, stimmst du der Verwendung von Cookies zu.">My website uses cookies.
+        <p data-de="Meine Website verwendet Cookies.<br>Indem du fortfährst, stimmst du der Verwendung von Cookies zu.">My
+            website uses cookies.
             <br>By continuing, you agree to the use of cookies.
             <br>
             <a href="datenschutz" data-de="Mehr Informationen">More Info</a>
@@ -154,7 +155,7 @@
                         break;
 
                     case 'media_collection':
-                        collection = item.components.map(component => `<img  src="${component.sizes.disp}">`)
+                        collection = item.components.map(component => `<div class="col_img"><img  src="${component.sizes.disp}"></div>`)
                         return render += `<div class="collection">${collection.join('')}</div>`
                         break;
                     default:
