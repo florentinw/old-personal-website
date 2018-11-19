@@ -321,6 +321,81 @@ FLEX
 
 /*
 -----------------------
+DARKMODE
+-----------------------
+*/
+@media (prefers-color-scheme: dark) {
+  body,
+  html {
+    color: #fff;
+    background: #111;
+  }
+  ::-moz-selection {
+    background: #aaaaaa;
+    /* WebKit/Blink Browsers */
+  }
+  ::selection {
+    background: #aaaaaa;
+    /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #aaaaaa;
+    /* Gecko Browsers */
+  }
+  p {
+    color: whitesmoke;
+  }
+}
+
+@media only screen and (prefers-color-scheme: dark) and (max-width: 1100px) {
+  aside#navbar {
+    background: #111 !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  section#port .row .item.light {
+    background-color: #111 !important;
+    color: whitesmoke !important;
+  }
+  section#contact .content form input,
+  section#contact .content form textarea {
+    background: #111 !important;
+    color: #aaaaaa !important;
+    border-color: #aaaaaa !important;
+    border-radius: 2px !important;
+  }
+  section#contact .content form input::-webkit-input-placeholder,
+  section#contact .content form textarea::-webkit-input-placeholder {
+    color: whitesmoke;
+  }
+  section#contact .content form input:-ms-input-placeholder,
+  section#contact .content form textarea:-ms-input-placeholder {
+    color: whitesmoke;
+  }
+  section#contact .content form input::-ms-input-placeholder,
+  section#contact .content form textarea::-ms-input-placeholder {
+    color: whitesmoke;
+  }
+  section#contact .content form input::placeholder,
+  section#contact .content form textarea::placeholder {
+    color: whitesmoke;
+  }
+  section#contact .content form select {
+    background: #111 !important;
+    color: whitesmoke !important;
+    border-color: #aaaaaa !important;
+  }
+  section#contact .content form button {
+    color: whitesmoke !important;
+  }
+  section#contact p {
+    color: #aaaaaa;
+  }
+}
+
+/*
+-----------------------
 NAV
 -----------------------
 */

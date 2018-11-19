@@ -223,10 +223,13 @@ section {
 }
 
 ::selection {
-  background: $lightgray; /* WebKit/Blink Browsers */
+  background: $lightgray;
+  /* WebKit/Blink Browsers */
 }
+
 ::-moz-selection {
-  background: $lightgray; /* Gecko Browsers */
+  background: $lightgray;
+  /* Gecko Browsers */
 }
 
 /*
@@ -293,6 +296,65 @@ FLEX
   }
   &.center {
     text-align: center;
+  }
+}
+
+/*
+-----------------------
+DARKMODE
+-----------------------
+*/
+
+@media (prefers-color-scheme: dark) {
+  body,
+  html {
+    color: $white;
+    background: $dark;
+  }
+  ::selection {
+    background: $darkgray;
+    /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: $darkgray;
+    /* Gecko Browsers */
+  }
+  p {
+    color: $lightgray;
+  }
+  @media only screen and (max-width: 1100px) {
+    aside#navbar {
+      background: $dark !important;
+    }
+  }
+  section#port .row .item.light {
+    background-color: $dark !important;
+    color: $lightgray !important;
+  }
+  section#contact {
+    .content form {
+      input,
+      textarea {
+        background: $dark !important;
+        color: $darkgray !important;
+        border-color: $darkgray !important;
+        border-radius: 2px !important;
+        &::placeholder {
+          color: $lightgray;
+        }
+      }
+      select {
+        background: $dark !important;
+        color: $lightgray !important;
+        border-color: $darkgray !important;
+      }
+      button {
+        color: $lightgray !important;
+      }
+    }
+    p {
+      color: $darkgray;
+    }
   }
 }
 
@@ -767,7 +829,7 @@ main#page {
           width: 100%;
         }
       }
-    } 
+    }
     img.image {
       width: 100%;
       margin: 3rem 0 0 0;
