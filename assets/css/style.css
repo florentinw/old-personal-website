@@ -126,12 +126,12 @@ q {
 blockquote:before, blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
 q:before, q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -148,7 +148,7 @@ CUSTOM
 html,
 body {
   font-size: 18px;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
   letter-spacing: -0.04em;
@@ -691,10 +691,10 @@ section#contact .content form {
   text-align: left;
 }
 
-section#contact .content form input[type='text'],
-section#contact .content form input[type='email'] {
+section#contact .content form input[type="text"],
+section#contact .content form input[type="email"] {
   font-size: 0.7rem;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   -webkit-appearance: none;
   text-decoration: none;
   outline: none;
@@ -714,28 +714,28 @@ section#contact .content form input[type='email'] {
   border-radius: 2px;
 }
 
-section#contact .content form input[type='text']:invalid,
-section#contact .content form input[type='email']:invalid {
+section#contact .content form input[type="text"]:invalid,
+section#contact .content form input[type="email"]:invalid {
   border: 3px solid whitesmoke;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-section#contact .content form input[type='checkbox'] {
+section#contact .content form input[type="checkbox"] {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-section#contact .content form input[type='checkbox']:invalid {
+section#contact .content form input[type="checkbox"]:invalid {
   border: 3px solid whitesmoke;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-section#contact .content form input[type='checkbox'] + label {
+section#contact .content form input[type="checkbox"] + label {
   font-size: 0.8rem;
 }
 
@@ -750,7 +750,7 @@ section#contact .content form select {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: 3px solid whitesmoke;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-size: 0.7em;
   letter-spacing: 0.3px;
   font-weight: 300;
@@ -796,7 +796,7 @@ section#contact .content form textarea {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 0.7em;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   padding: 15px 20px;
   width: 100%;
   min-height: 100px;
@@ -839,7 +839,7 @@ section#contact .content form .flex input {
 button {
   text-transform: uppercase;
   display: inline;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   border: none;
   text-decoration: none;
   background: initial;
@@ -905,15 +905,15 @@ footer .flex ul li span {
 }
 
 footer .flex ul.legal li::after {
-  content: '-';
+  content: "-";
 }
 
 footer .flex ul.legal li:last-of-type::after {
-  content: '';
+  content: "";
 }
 
 footer .flex ul.legal li:first-of-type::after {
-  content: '|';
+  content: "|";
 }
 
 footer .flex ul.icons a {
@@ -1042,5 +1042,9 @@ COOKIE THING
   color: #111;
   font-size: 0.9rem;
   border-bottom-color: #111;
+}
+
+.grecaptcha-badge {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

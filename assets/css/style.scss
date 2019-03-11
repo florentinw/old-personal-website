@@ -122,7 +122,7 @@ q {
   quotes: none;
   &:before,
   &:after {
-    content: '';
+    content: "";
     content: none;
   }
 }
@@ -130,7 +130,7 @@ q {
 q {
   &:before,
   &:after {
-    content: '';
+    content: "";
     content: none;
   }
 }
@@ -153,7 +153,7 @@ $darkgray: rgb(170, 170, 170);
 html,
 body {
   font-size: 18px;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 400;
   word-wrap: break-word;
   letter-spacing: -0.04em;
@@ -578,10 +578,10 @@ section#contact {
     form {
       margin: 40px 0;
       text-align: left;
-      input[type='text'],
-      input[type='email'] {
+      input[type="text"],
+      input[type="email"] {
         font-size: 0.7rem;
-        font-family: 'Roboto Mono', sans-serif;
+        font-family: "Roboto Mono", sans-serif;
         -webkit-appearance: none;
         text-decoration: none;
         outline: none;
@@ -602,7 +602,7 @@ section#contact {
           box-shadow: none;
         }
       }
-      input[type='checkbox'] {
+      input[type="checkbox"] {
         outline: none;
         box-shadow: none;
         &:invalid {
@@ -610,7 +610,7 @@ section#contact {
           outline: none;
           box-shadow: none;
         }
-        +label {
+        + label {
           font-size: 0.8rem;
         }
       }
@@ -624,7 +624,7 @@ section#contact {
         background-color: rgb(245, 245, 245);
         box-sizing: border-box;
         border: 3px solid rgb(245, 245, 245);
-        font-family: 'Roboto Mono', sans-serif;
+        font-family: "Roboto Mono", sans-serif;
         font-size: 0.7em;
         letter-spacing: 0.3px;
         font-weight: 300;
@@ -662,7 +662,7 @@ section#contact {
         display: block;
         box-sizing: border-box;
         font-size: 0.7em;
-        font-family: 'Roboto Mono', sans-serif;
+        font-family: "Roboto Mono", sans-serif;
         padding: 15px 20px;
         width: 100%;
         min-height: 100px;
@@ -694,7 +694,7 @@ section#contact {
 button {
   text-transform: uppercase;
   display: inline;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   border: none;
   text-decoration: none;
   background: initial;
@@ -741,13 +741,13 @@ footer {
       &.legal {
         li {
           &::after {
-            content: '-';
+            content: "-";
           }
           &:last-of-type::after {
-            content: '';
+            content: "";
           }
           &:first-of-type::after {
-            content: '|';
+            content: "|";
           }
         }
       }
@@ -871,4 +871,8 @@ COOKIE THING
     font-size: 0.9rem;
     border-bottom-color: $dark;
   }
+}
+
+.grecaptcha-badge {
+  display: none;
 }
